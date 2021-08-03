@@ -11,6 +11,7 @@ Students are needed to develop a Web site for a profit making organization of th
 from their respective tutor before they start. Students are required to complete the following 2 tasks:
 
 Part A: Proposal for designing a Web site which includes the planning involved.
+
 Part B: Implementing the Web site which includes the construction of a graphically interesting and user-friendly Web site using HTML5, CSS and JavaScript.
 
 This assignment should be submitted before week 13 of the semester. Late submission will be penalized based on the Late Submission Policy by TAR UC. 
