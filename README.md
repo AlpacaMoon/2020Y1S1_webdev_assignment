@@ -1,5 +1,7 @@
 # AACS1483 Web Design and Development Assignment - 202005 Y1S1
+
 This repository consists of the final outcomes of the course AACS1483 Web Design and Development in the Diploma in Computer Science (DCS) Year 1 Semester 1. 
+
 Finished on: 13 September 2020
 
 ----------------------------------------------------------------------------------------------------------------------------------
