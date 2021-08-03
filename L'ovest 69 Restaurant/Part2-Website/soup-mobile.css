@@ -1,0 +1,218 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       soup-mobile.css
+
+    Function:   Styles for soup-1.html on smaller screens. 
+                Arrange the soup list items into one column on smaller screens. 
+                Arrange the overlay soup contents vertically on smaller screens. 
+                Adjustments to fit the elements into smaller screens. 
+*/
+
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 1200px) {
+    #slide1-box a{
+        width: 40%;
+    }
+}
+
+/* Arrange the soup items into one column instead of two columns */
+@media screen and (max-width: 1024px) {
+    #slide2 {
+        height: 1400px;
+    }
+
+    #slide2:before {
+        background-size: cover;
+    }
+
+    #slide2>div:first-of-type {
+        height: 1300px;
+        position: relative;
+    }
+
+    #soup-list-box {
+        top: 100px;
+        transform: translateX(-50%);
+        height: 1000px;
+        overflow: scroll;
+    }
+
+    #soup-list-box.extended {
+        width: 80%;
+    }
+
+    #soup-list {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    .soup-item {
+        width: 90%;
+    }
+    
+
+    #overlayBox {
+        width: 95%;
+    }
+
+    #overlayBox #overlayImg {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    #overlayBox #overlayName {
+        width: 45vw;
+    }
+
+    #overlayBox #overlayPrice {
+        width: 10vw;
+    }
+
+    #overlayBox #overlayDesc {
+        width: 56vw;
+    }
+
+    #overlayBox #overlayCart {
+        width: 30vw;
+    }
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 900px) {
+    #slide1-box a{
+        width: 55%; 
+        min-width: 300px;
+    }
+
+    #overlayBox #overlayName {
+        width: 40vw;
+    }
+
+    #overlayBox #overlayDesc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 12;
+        -webkit-box-orient: vertical;
+    }
+}
+
+/* The overlay contents are rearrange vertically */
+@media screen and (max-width: 768px) {
+    #slide1-box a{
+        font-size: 5rem;
+        width: 60%; 
+    }
+
+    #grayOverlay span {
+        bottom: 20px;
+        font-size: 4vw;
+    }
+
+    #overlayBox {
+        overflow: scroll;
+        width: 90%;
+        height: 100vw;
+        max-height: 600px;
+        border-top: 20px solid white;
+        border-bottom: 20px solid white;
+    }
+
+    #overlayBox #overlayImg {
+        width: 95%;
+        height: 49vw;
+        margin: 0 auto;
+        float: none;
+    }
+
+    #overlayBox #overlayName {
+        width: 70%;
+    }
+
+    #overlayBox #overlayPrice {
+        width: 30%;
+    }
+
+    #overlayBox #overlayName, #overlayBox #overlayPrice {
+        height: auto;
+        padding: 2vw;
+        font-size: 5vw;
+    }
+
+    #overlayBox #overlayDesc {
+        width: 100%;
+        margin: 0;
+        padding: 0 2vw;
+        height: auto;
+        min-height: 50px;
+        margin-bottom: 2.5vw;
+    }
+
+    #overlayBox #overlayDesc span {
+        font-size: 3vw;
+    }
+
+    #overlayBox #overlayCart {
+        width: 95%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    #overlayBox #overlayCart button {
+        font-size: 6vw;
+    }
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 600px) {
+    #soup-list-box.extended {
+        width: 90%;
+    }
+    .soup-item {
+        width: 95%;
+    }
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 480px) {
+    #slide1-box a{
+        font-size: 20vw;
+        width: 70%; 
+        min-width: 200px;
+    }
+
+    .soup-item-name {
+        font-size: 6vw;
+    }
+
+    .soup-item-price {
+        font-size: 5vw;
+    }
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 320px) {
+
+    #slide2 {
+        height: 920px;
+    }
+
+    #slide2>div:first-of-type {
+        height: 820px;
+        position: relative;
+    }
+
+    #soup-list-box {
+        height: 600px;
+    }
+
+    .soup-item {
+        height: 100px;
+    }
+
+}

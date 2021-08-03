@@ -1,0 +1,256 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       default-layout-mobile.css
+
+    Function:   This is the default layout for smaller screens for all html files of this website. 
+                The navigation list will be hidden on smaller screens and a hamburger icon is used to display it. 
+                The footer is rearranged to fit in smaller screens. 
+                The cart will expand to the whole screen for smaller screens. 
+                Hide the Back to top button for smaller screens. 
+                Minor adjustments to fit the elements into smaller screens. 
+*/
+
+/* Hide the navigation list and use a Hamburger icon to display it */
+/* The cart will expand to the whole screen */
+@media screen and (max-width: 900px) {
+    
+    #navBar {
+        height: 70px;
+    }
+
+    #navList {
+        position: fixed;
+        top: -300px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        transition: 0.5s ease-in-out;
+        z-index: 10;
+    }
+
+    #navList.extended {
+        top: 70px;
+        transition: 0.5s ease-in-out;
+    }
+
+    #navList #cart-icon-space {
+        display: none;
+    }
+
+    #navList li.navItem {
+        position: relative;
+        float: left;
+        transition: 0.3s;
+        background: white;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #navList .navItem:hover {
+        background: rgb(236, 236, 236);
+        transition: 0.5s;
+    }
+
+    #navList .navItem a:hover {
+        color: rgb(69, 69, 69);
+    }
+
+    #navList .navItem:hover:before {
+        transition: 0.5s;
+        transform: scalex(0);
+    }
+
+    #cart-icon {
+        z-index: 15;
+    }
+
+    #hamburger-icon {
+        display: block;
+        width: 36px;
+        cursor: pointer;
+        position: absolute;
+        top: 17px;
+        left: 25px;
+        transition: 0.3s;
+        z-index: 15;
+    }
+
+    #hamburger-icon:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    #hamburger-icon:active {
+        transform: scale(1.3);
+        transition: 0.15s;
+    }
+
+    #dropdown-content {
+        width: 100%;
+        height: 100vh;
+    }
+
+    #cart-item-list {
+        padding: 5px 10px;
+        max-height: 82vh;
+    }
+
+    .cart-item-del {
+        width: 40px;
+    }
+    
+}
+
+/* Minor adjustments to fit into the screen */
+@media screen and (max-width: 768px) {
+    
+    #footer .footerIcons li:nth-of-type(4) {
+        padding-left: 15px;
+        border-left: 0px;
+    }
+
+    #footer img {
+        transition: 0.4s;
+    }
+
+    #footer .hovered {
+        transform: scale(1.2);
+        transition: 0.2s;
+    }
+
+}
+
+/* Hide the back to top button */
+/* Rearrange the footer to fit into smaller screens */
+@media screen and (max-width: 600px) {
+    #back-to-top {
+        display: none;
+    }
+
+    #footer >div {
+        padding: 0px;
+    }
+
+    #footer ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    #footer .footerItem, #footer .footerIcons{
+        margin: 0;
+    }
+
+    #footer .footerIcons li {
+        margin: 0 1vw;
+        padding: 0;
+    }
+
+    #footer .footerItem:nth-of-type(2) {
+        order: 1;
+    }
+
+    #footer .footerIcons li:nth-of-type(4) {
+        padding-left: 2vw;
+    }
+
+    #footer .footerIcons li:nth-of-type(1) {
+        padding-right: 2vw;
+    }
+
+    #footer .footerItem {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    #footer .footerIcons {
+        float: left;
+    }
+
+
+    #footer .footerIcons img {
+        width: 7vw;
+    }
+
+    #footer #mediaTooltipLi, 
+    #footer #mediaTooltip, 
+    #footer #mediaTooltipCover {
+        display: none;
+    }
+}
+
+/* Adjust the cart item details to fit the screen */
+@media screen and (max-width: 480px) {
+
+    #dropdown-content {
+        padding: 5px 0;
+    }
+
+    #cart-item-list {
+        padding: 5px 4vw;
+    }
+
+    .cart-item {
+        margin: 0 0 1vw 0;
+    }
+
+    #dropdown-content .cart-item-img {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    #dropdown-content .cart-item-name {
+        font-size: 5vw;
+    }
+
+    #dropdown-content .cart-item-price, .cart-item-desc {
+        font-size: 3vw;
+    }
+
+    #dropdown-content .cart-item-subtotal {
+        font-size: 4vw;
+    }
+
+    #dropdown-content .cart-item-del {
+        width: 8vw;
+    }
+
+    #dropdown-content .cart-item-count {
+        width: 14vw;
+        height: 7vw;
+    }
+
+    #dropdown-content .cart-item-count * {
+        font-size: 3vw;
+    }
+
+}
+
+/* Disable the quantity [+/-] buttons, Minor adjustments to cart details */
+@media screen and (max-width: 360px) {
+    #navList li.navItem {
+        font-size: 5vw;
+    }
+
+    #dropdown-content .cart-item-count button {
+        display: none;
+    }
+
+    #dropdown-content .cart-item-count input {
+        width: 100%;
+        border-radius: 2vw;
+    }
+
+    .cart-item table {
+        border-spacing: 2vw;
+    }
+}

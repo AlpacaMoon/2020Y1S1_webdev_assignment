@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wong Kar Yan
+        Filename:       drink-2.html
+
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Drink 2</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+
+    <!--Embedded Styles-->
+    <style>
+
+    </style>
+
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="styledrinks.css" />
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List--> <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content -->
+    <div id="content">
+        <!--header-->
+        <div class="header">
+                <h1>Drink</h1>
+        </div>
+        <div class="heading">
+            <p>L'ovest 69</p>
+        </div>
+        <!--body-->
+        <div class="row1">
+
+            <!--column 1-->
+            <div class="col-1-1">
+                <div>
+                    <!--links of the modules-->
+                    <ul class="modules">
+                        <li class="link"><a href="meat-1.html">Meat</a></li>
+                        <li class="link"><a href="vegetable-1.html">Vege</a></li>
+                        <li class="link"><a href="soup-1.html">Soup</a></li>
+                        <li class="link"><a href="dessert-1.html">Dessert</a></li>
+                    </ul>
+               </div><br />
+            </div>
+
+            <!--column 2-->
+            <div class="col-1-2">
+
+                <!--drink1-->
+                <div class="drink">
+                    <!--Image of drink-->
+                    <img src="pics/drink/HoneythymeMargarita.png" alt="Honey Thyme Magarita" class="pics" />
+
+                    <!--product name-->
+                    <div class="overlay">Honey Thyme Margarita<br />$10.00</div>
+                </div>
+
+                <!--product description-->
+                <div class="desc">
+                      <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;">Honey Thyme Magarita</h1>
+                      <p>Honey Thyme Margarita is made with fresh squeezed lime juice and grapefruit juice and thyme infused honey. We are used Orange Blossom honey so it can soothe coughs and sore throats.
+                      </p>
+
+                      <!--price-->
+                      <p style="font-weight: bold;">$10.00</p><br />
+
+                      <!--Add to cart button-->
+                      <button class="addtocart" onclick="addToCart('Honey Thyme Magarita', 10.00, 1, 'pics/drink/HoneythymeMargarita.png', 'drink.html', 'Honey Thyme Margarita is made with fresh squeezed lime juice and grapefruit juice and thyme infused honey. We are used Orange Blossom honey so it can soothe coughs and sore throats.')">
+                         Add to Cart
+                      </button> 
+                </div><br /><br />
+                <!--drink2-->
+                <div class="drink">
+
+                    <!--product image-->
+                    <img src="pics/drink/RhubarbMintMojito.png" alt="Rhubarb Mint Mojito" class="pics" />
+
+                    <!--product name-->
+                    <div class="overlay">Rhubarb Mint Mojito<br />$9.00</div>
+                </div>
+
+                <!--product description-->
+                <div class="desc">
+                      <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;">Rhubarb Mint Mojito</h1>
+                      <p>Rhubarb Mint Mojito is mixed by mint, rhubarb, lime juice, soda water and rum. Rhubarb is a kind of vegetable that have used for medicinal purpose for thousands years.
+                      </p>
+
+                      <!--price-->
+                      <p style="font-weight: bold;">$9.00</p><br />
+                      <!--add to cart button-->
+                      <button class="addtocart" onclick="addToCart('Rhubarb Mint Mojito', 9.00, 1, 'pics/drink/RhubarbMintMojito.png' , 'drink.html', 'Rhubarb Mint Mojito is mixed by mint, rhubarb, lime juice, soda water and rum. Rhubarb is a kind of vegetable that have used for medicinal purpose for thousands years.')">
+                         Add to Cart
+                      </button> 
+                </div><br /><br />
+
+                <!--drink3-->
+                <div class="drink">
+
+                    <!--product image-->
+                    <img src="pics/drink/PassionfruitandGingerCocktail.png" alt="Passionfruit and Ginger Cocktail" class="pics" />
+
+                    <!--product name-->
+                    <div class="overlay">Passionfruit and Ginger Cocktail<br />$9.00</div>
+                </div>
+
+                <!--product description-->
+                <div class="desc">
+                      <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;" class="heading">Passionfruit and Ginger Cocktail</h1>
+                      <div class="message">&#8678 Best Seller!!</div>
+                      <p>Passion fruit and Ginger Cocktail is drink that mixed by lemon juice, passionfruit, water, rum, and ginger sliced. Passion fruit is rich in vitamin C that help to boost your immunity.
+                      </p>
+
+                      <!--price-->
+                      <p style="font-weight: bold;">$9.00</p><br />
+
+                      <!--add to cart button-->
+                      <button class="addtocart" onclick="addToCart('Passionfruit and Ginger Cocktail', 9.00, 1, 'pics/drink/PassionfruitandGingerCocktail.png', 'drink.html', 'Passion fruit and Ginger Cocktail is drink that mixed by lemon juice, passionfruit, water, rum, and ginger sliced. Passion fruit is rich in vitamin C that help to boost your immunity.')">
+                         Add to Cart
+                      </button> 
+                </div><br /><br />
+
+                <!--drink4-->
+                <div class="drink">
+
+                    <!--product image-->
+                    <img src="pics/drink/PearRosemarySpritzer.png" alt="Pear Rosemary Spritzer" class="pics" />
+
+                    <!--product name-->
+                    <div class="overlay">Pear Rosemary Spritzer<br />$7.00</div>
+                </div> 
+
+                <!--product description-->
+                <div class="desc">
+                      <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;">Pear Rosemary Spritzer</h1>
+                      <p>Pear Rosemary Spritzer has featured pear juice, rosemary syrup, lemon-line soda, and club soda. Pear is one of the fruits may boost heart health and linked to a lower risk of diabetes.
+                      </p>
+
+                      <!--price-->
+                      <p style="font-weight: bold;">$7.00</p><br />
+
+                      <!--add to cart button-->
+                      <button class="addtocart" onclick="addToCart('Pear Rosemary Spritzer', 7.00, 1, 'pics/drink/PearRosemarySpritzer.png', 'drink.html', 'Pear Rosemary Spritzer has featured pear juice, rosemary syrup, lemon-line soda, and club soda. Pear is one of the fruits may boost heart health and linked to a lower risk of diabetes.')">
+                         Add to Cart
+                      </button> 
+                </div><br /><br />
+
+                <!--drink5-->
+                <div class="drink">
+
+                  <!--product image-->
+                  <img src="pics/drink/CoconutRosewaterBlackberrySmash.png" alt="Coconut Rosewater Blackberry Smash" class="pics" />
+
+                  <!--product name-->
+                  <div class="overlay">Coconut Rosewater Blackberry Smash<br />$12.00</div>
+                </div>
+
+                <!--product description-->
+                <div class="desc">
+                      <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;" class="heading">Coconut Rosewater Blackberry Smash</h1>
+                      <div class="message">&#8678 Best Seller!!</div>
+                      <p>Coconut Rosewater Blackberry Smash is mix by lime juice, coconut cream, gin, rosewater, and blackberry for garnish. Blackberry able to maintain and boost our brain health. Not only that, blackberry also rich in fiber that can help you in your diet.
+                      </p>
+
+                      <!--price-->
+                      <p style="font-weight: bold;">$12.00</p><br />
+
+                      <!--add to cart button-->
+                      <button class="addtocart" onclick="addToCart('Coconut Rose water Blackberry Smash', 12.00, 1, 'pics/drink/CoconutRosewaterBlackberrySmash.png', 'drink.html', 'Coconut Rosewater Blackberry Smash is mix by lime juice, coconut cream, gin, rosewater, and blackberry for garnish. Blackberry able to maintain and boost our brain health. Not only that, blackberry also rich in fiber that can help you in your diet.')">
+                         Add to Cart
+                      </button> 
+                </div><br /><br />
+            </div>  
+        </div>
+    </div>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

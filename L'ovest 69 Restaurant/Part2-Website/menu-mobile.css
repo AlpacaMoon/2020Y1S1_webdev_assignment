@@ -1,0 +1,149 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       menu-mobile.css
+
+    Function:   Styles for menu.html on smaller screens. 
+                Adjustments to fit the elements on smaller screens. 
+*/
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 1024px) {
+    #slide1-text a {
+        font-size: 8vw;
+        width: 50%; 
+        min-width: 0;
+    }
+
+    #searchDishField {
+        font-size: 2vw;
+        margin-top: 2.5vw;
+        width: 50%;
+    }
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 768px) {
+
+    #slide1-text a {
+        font-size: 10vw;
+        min-width: 200px;
+    }
+
+    #searchDishField {
+        font-size: 2.5vw;
+        margin-top: 5vw;
+        min-width: 200px;
+    }
+
+    #plate-container {
+        position: relative;
+        width: 80vw;
+        height: 80vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-bottom: 56.25%;
+    }
+    
+    #plate-bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50.25%, -50%);
+        width: 85vw;
+    }
+
+    #plate-vege.plateHover {
+        transform: scale(0.95);
+        top: 21%;
+        right: 8%;
+    }
+
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 720px) {
+
+    .plate-hover-text {
+        font-size: 1vw;
+    }
+
+    #plate-meat {
+        top: 45%;
+        left: 40%;
+    }
+    
+    #plate-meat.plateHover {
+        font-size: 9vw;
+        top: 20%;
+        left: 18%;
+    }
+    
+    #plate-vege {
+        top: 45%;
+        right: 40%;
+    }
+    
+    #plate-vege.plateHover {
+        font-size: 6.5vw;
+        top: 21%;
+        right: 9%;
+    }
+    
+    #plate-soup {
+        top: 50%;
+        right: 45%;
+    }
+    
+    #plate-soup.plateHover {
+        font-size: 9vw;
+        top: 54%;
+        right: 4%;
+    }
+    
+    #plate-dessert {
+        top: 55%;
+        left: 50%;
+    }
+    
+    #plate-dessert.plateHover {
+        font-size: 8.5vw;
+        top: 79%;
+        left: 50%;
+    }
+    
+    #plate-drinks {
+        top: 50%;
+        left: 45%;
+    }
+    
+    #plate-drinks.plateHover {
+        font-size: 8.5vw;
+        top: 54%;
+        left: 3.5%;
+    }
+    
+}
+
+/* Adjustments to fit the elements into the screen */
+@media screen and (max-width: 480px) {
+
+    #slide1-text a {
+        font-size: 20vw;
+        width: 70%; 
+    }
+
+    #searchDishField {
+        font-size: 4vw;
+        margin-top: 10vw;
+        width: 70%;
+    }
+
+    #slide2 > div:first-of-type, #slide2-indent, #footer-space {
+        height: 0;
+    }
+    
+}

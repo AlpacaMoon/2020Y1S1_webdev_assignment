@@ -1,0 +1,642 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       default-layout.css
+
+    Function:   This is the default layout styles for all the html files.
+                In this way, the whole website is able to maintain consistency of the overall design.
+                By using the same base layout for all html, work time is also efficiently reduced. 
+*/
+
+
+
+/*------------------------------ENTIRITY STYLES-----------------------------------*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: rgb(69, 69, 69);
+}
+
+body {
+    font-family: Impact, Charcoal, sans-serif;
+    background: white;
+
+    /* Hide everything when jumping between page to have smooth transitions */
+    visibility: hidden;
+}
+
+/* Only Show Logo and White BG on transition */
+#navLogo, #page-transition {
+    visibility: visible;
+}
+
+/* Change selection highlight color */
+::selection {
+    background: rgb(221, 221, 221);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 35%, 0.5);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-clip: content-box;
+}
+
+
+
+/* ===============PAGE TRANSITION STYLES=============== */
+
+/* White BG Cover */
+#page-transition {
+    display: block;
+    z-index: 100;
+    background: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Slide Down Page Transition */
+#page-transition.downed {
+    height: 100%;
+    transition: 0.4s;
+}
+
+/* Slide Up Page transition */
+#page-transition.upped {
+    height: 0px;
+    transition: 0.8s;
+}
+
+
+
+/* ===============HEADER STYLES=============== */
+
+/* Total Header Height: 67px */
+
+/* Header */
+#navBar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.4s;
+    padding: 16px 30px;
+    z-index: 99;
+}
+
+
+
+/*=================== LOGO STYLES ===================*/
+
+/* 69 Logo */
+#navLogo {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    padding-top: 0px;
+    z-index: 101;
+    left: 50%;
+    user-select: none;
+}
+
+/* 69 Logo Move to Top */
+#navLogo.pageTop {
+    top: 0px;
+    transform: translateX(-50%) translateY(0%) scale(1) rotate(0deg);
+    transition: 0.8s;
+}
+
+/* 69 Logo Rotate to Center */
+#navLogo.pageCenterIn {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(3.1) rotate(720deg);
+    transition: 0.8s cubic-bezier(.34, .75, .18, 1.2);
+}
+
+/* 69 Logo Rotate out from center */
+#navLogo.pageCenterOut {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(3.1) rotate(-720deg);
+    transition: 0.8s cubic-bezier(.34, .75, .18, 1.2);
+}
+
+/* Diamond-shaped Background for 69 Logo */
+#navLogoDiamond {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    background: white;
+    z-index: 99;
+    transition: 0.3s;
+}
+
+
+
+/*=================== NAVIGATION LIST STYLES ===================*/
+
+#navList li {
+    display: inline-block;
+    padding: 6px 0px;
+}
+
+#navList .navItem {
+    position: relative;
+    margin: 0px 2vw;
+}
+
+/* Menu, Events, Membership, About Us */
+#navList .navItem a {
+    color: rgb(69, 69, 69);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    display: block;
+    transition: color 0.2s ease-in-out;
+    user-select: none;
+}
+
+/* Menu, Events, Membership, About Us */
+#navList .navItem a:hover {
+    color: rgb(130, 127, 77);
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+/* Menu */
+#navList li:nth-of-type(1) {
+    margin-left: 3vw;
+}
+
+/* Menu, Events */
+#navList li:nth-of-type(1), #navList li:nth-of-type(2) {
+    float: left;
+}
+
+/* Membership, About Us */
+#navList li:nth-of-type(3), #navList li:nth-of-type(4), #navList li:nth-of-type(5) {
+    float: right;
+}
+
+#navList .navItem::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid rgb(130, 127, 77);
+    transition: 0.5s;
+    transform: scaleX(0);
+    pointer-events: none;
+}
+
+/* Underline animation on hover */
+#navList .navItem:hover::before {
+    transition: 0.5s;
+    transform: scalex(1.02);
+}
+
+#hamburger-icon {
+    display: none;
+    user-select: none;
+}
+
+
+
+/* ===============DROPDOWN CART STYLES=============== */
+
+/* Blank space reserved for cart icon */
+#cart-icon-space {
+    width: 3.25%;
+}
+
+#cart-icon {
+    position: absolute;
+    right: 2%;
+    top: 16px;
+    width: 32px;
+    display: block;
+    animation: shake 250ms infinite;
+    animation-play-state: paused;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Cart Icon Shake Animation */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Detection for slide up Cart */
+.dropdown-hitbox {
+    position: fixed;
+    display: none;
+    z-index: 50;
+}
+
+#dropdown-hitbox-1 {
+    width: 66%;
+    top: 8%;
+    padding-bottom: 750px;
+}
+
+/* Dropdown Cart */
+#dropdown-content {
+    position: fixed;
+    right: 0%;
+    width: 450px;
+    background-color: white;
+    padding: 5px 15px 3px 15px;
+    z-index: 51;
+    border-radius: 3%;
+    transition: 0.5s ease-in-out;
+    transition: 0.5s;
+    top: -1080px;
+}
+
+#dropdown-content.cartDropDown {
+    top: 55px;
+    transition: 0.5s;
+}
+
+/* "Cart" Title */
+.cart-title {
+    text-align: center;
+    padding: 0px;
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: rgb(69, 69, 69);
+    user-select: none;
+}
+
+
+
+/* ===============CART ITEMS LIST STYLES=============== */
+
+#cart-item-list {
+    overflow: scroll;
+    max-height: 565px;
+    padding: 5px 0;
+}
+
+/* Individual Cart Items */
+.cart-item {
+    position: relative;
+    border: 3px solid rgb(69, 69, 69);
+    border-radius: 5px;
+    margin: 0 5px 10px 5px;
+    transition: 0.3s;
+}
+
+/* Cart Item Hover Styles */
+.cart-item:hover {
+    border: 5px solid rgb(130, 127, 77);
+    transform: scale(1.025);
+    transition: 0.3s;
+}
+
+
+
+/*=================== Individual Items Styles ===================*/
+
+.cart-item table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    table-layout: fixed;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.cart-item-img {
+    position: relative;
+    width: 90px;
+    height: 98px;
+    transition: 0.3s;
+}
+
+.cart-item-img div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid rgb(69, 69, 69);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.cart-item:hover .cart-item-img div {
+    border: 3px solid rgb(130, 127, 77);
+    transform: scale(1.025);
+    transition: 0.3s;
+}
+
+.cart-item-name {
+    font-size: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 65%;
+}
+
+.cart-item-desc {
+    padding-right: 10px;
+    color: rgba(138, 138, 138, 0.7);
+    font-size: 15px;
+    font-style: italic;
+    font-family: 'Bahnschrift Condensed';
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.count-btn-minus, .count-field, .count-btn-plus {
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    height: 20px;
+    border: 1px solid rgb(69, 69, 69);
+}
+
+.count-btn-minus, .count-btn-plus {
+    border: 1.5px solid rgb(69, 69, 69);
+    width: 27.5%;
+    cursor: pointer;
+}
+
+.count-btn-minus {
+    border-radius: 5px 0 0 5px;
+}
+
+.count-btn-plus {
+    border-radius: 0 5px 5px 0;
+}
+
+.count-btn-minus:focus, .count-btn-plus:focus, .count-field:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px 0px rgba(69, 69, 69, 0.5);
+}
+
+.count-field {
+    width: 45%;
+}
+
+/* Remove the Arrow Buttons in number input */
+/* Chrome, Safari, Edge, Opera */
+.count-field::-webkit-outer-spin-button, .count-field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+.count-field[type=number] {
+    -moz-appearance: textfield;
+}
+
+.cart-item-count {
+    transition: 0.3s;
+}
+
+.cart-item:hover .cart-item-count {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.cart-item-price {
+    font-size: 1.15em;
+}
+
+.cart-item-subtotal {
+    vertical-align: middle;
+    font-size: 1.25em;
+    width: 55%;
+}
+
+.cart-item:hover .cart-item-price, 
+.cart-item:hover .cart-item-price span,
+.cart-item:hover .cart-item-subtotal,
+.cart-item:hover .cart-item-subtotal span,
+.cart-item:hover .cart-item-name a {
+    color: rgb(130, 127, 77);
+    transition: 0.3s;
+}
+
+.cart-item-del {
+    width: 9%;
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.cart-item-del img {
+    width: 100%;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.cart-item:hover .cart-item-del img {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+
+
+/*=================== CART CHECKOUT BUTTON ===================*/
+
+#cart-checkout {
+    color: rgb(69, 69, 69);
+    background-color: transparent;
+    border: 3px solid rgb(69, 69, 69);
+    font-size: 1.4rem;
+    margin: 5px 4px;
+    box-shadow: none;
+    transition: 0.3s;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#cart-checkout:hover {
+    background-color: rgb(130, 127, 77);
+    border: 3px solid rgb(130, 127, 77);
+    box-shadow: none;
+    font-size: 1.7rem;
+    transition: 0.2s;
+}
+
+#cart-checkout:hover span {
+    color: white;
+    user-select: none;
+}
+
+#cart-checkout #checkoutValid, #cart-checkout #checkoutInvalid {
+    display: none;
+}
+
+
+
+/* ===============BACK-TO-TOP BUTTON STYLES=============== */
+
+#back-to-top {
+    display: block;
+    position: fixed;
+    color: rgb(69, 69, 69);
+    right: 0%;
+    bottom: 2.75%;
+    transition-duration: 0.5s;
+    z-index: 50;
+    user-select: none;
+}
+
+#back-to-top img {
+    width: 69px;
+}
+
+
+
+/* ===============FOOTER STYLES=============== */
+
+#footer {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background: transparent;
+}
+
+#footer>div {
+    background-color: white;
+    height: 85%;
+    padding: 10px;
+}
+
+#footer li {
+    display: block;
+}
+
+#footer a {
+    color: rgb(69, 69, 69);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    user-select: none;
+}
+
+#footer a:hover {
+    color: rgb(130, 127, 77);
+    transition: color 0.2s ease-in-out;
+}
+
+/* Contact Us, Support */
+#footer .footerItem {
+    position: relative;
+    float: left;
+    font-size: 1.5em;
+    margin: 15px 2% 0px 2%;
+    padding: 6px 0px;
+    z-index: 5;
+}
+
+/* Contact Us */
+#footer .footerItem:nth-of-type(1) {
+    margin-left: 5%;
+}
+
+#footer .footerItem::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid rgb(130, 127, 77);
+    transition: 0.5s;
+    transform: scaleX(0);
+    pointer-events: none;
+}
+
+/* Underline Animation on Hover */
+#footer .footerItem:hover::before {
+    transition: 0.4s;
+    transform: scalex(1);
+}
+
+/*** Social Media Icons */
+#footer .footerIcons {
+    float: right;
+    margin-top: 14px;
+    padding: 0;
+}
+
+#footer .footerIcons li {
+    float: right;
+    padding: 0px 5px;
+}
+
+#footer .footerIcons img {
+    width: 35px;
+}
+
+#footer .footerIcons li:nth-of-type(1) {
+    padding-right: 90px;
+}
+
+#footer .footerIcons li:nth-of-type(4) {
+    padding-left: 15px;
+    border-left: 3px solid rgb(200, 0, 0);
+}
+
+/* Sliding Tooltip */
+#footer #mediaTooltipLi {
+    position: relative;
+    margin-right: 10px;
+}
+
+#footer #mediaTooltip, #footer #mediaTooltipCover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 35px;
+    line-height: 1.6;
+    text-align: right;
+    font-size: 1.4em;
+}
+
+#footer #mediaTooltipCover {
+    background: white;
+    transition: 0.4s;
+    z-index: 4;
+}

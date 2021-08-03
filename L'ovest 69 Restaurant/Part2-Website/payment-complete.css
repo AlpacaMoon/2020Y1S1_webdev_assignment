@@ -1,0 +1,186 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       payment-complete.css
+
+    Function:   Styles for the payment-complete.html page. 
+*/
+
+/*==================== Overall Page Styles ====================*/
+
+body>div:nth-of-type(2) {
+    background: url("pics/payment/payment-slide2-bg.jpeg") center/cover no-repeat;
+}
+
+#cart-icon, #navList #cart-icon-space {
+    display: none;
+}
+
+/*==================== Main Receipt Styles ====================*/
+
+#content {
+    padding: 140px 0 70px 0;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#content>div {
+    background: white;
+    width: 80%;
+    max-width: 1000px;
+    border: 0.5vw solid rgb(69, 69, 69);
+}
+
+#content #docTitle {
+    border-bottom-width: 0px;
+    text-align: center;
+    padding: 5px;
+    font-size: 5vw;
+}
+
+#content #docContent {
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    margin-top: -4px;
+    height: 60%;
+    padding: 1vw 2vw;
+}
+
+#content #docFoot {
+    border-top-width: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1vw;
+}
+
+#docContent table {
+    border: 1px solid rgb(69, 69, 69);
+    width: 100%;
+    padding: 1vw;
+}
+
+/*==================== Customer Details Section Styles ====================*/
+
+#custDetails {
+    margin-bottom: 5px;
+}
+
+#custDetails td {
+    border: 1px solid none;
+    vertical-align: middle;
+    font-size: 1.25vw;
+    padding: 0.25vw;
+}
+
+#custDetails .detailLeft, #custDetails .detailRight {
+    width: auto;
+    font-size: 1.4vw;
+}
+
+#custDetails .detailLeft {
+    padding-left: 0.5vw;
+}
+
+#custDetails tr td:nth-of-type(2) {
+    width: 65%;
+}
+
+#custDetails #custName, #custDetails #payDate, #custDetails #custAddress {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*==================== Receipt Details Section Styles ====================*/
+
+#receiptDetails thead td, #receiptDetails tfoot td {
+    font-size: 1.75vw;
+}
+
+#receiptDetails tbody td {
+    font-size: 1.5vw;
+}
+
+#receiptDetails .subtotals td {
+    font-size: 1.5vw;
+}
+
+#receiptDetails tfoot tr:last-of-type td {
+    font-size: 2.25vw;
+}
+
+#receiptDetails thead td {
+    padding: 0 0.5vw 1vw 0.5vw;
+}
+
+#receiptDetails thead td:first-of-type {
+    width: 50%;
+}
+
+#receiptDetails thead td:nth-of-type(2), #receiptDetails thead td:nth-of-type(3), #receiptDetails thead td:nth-of-type(4) {
+    width: 15%;
+}
+
+#receiptDetails thead td:nth-of-type(3), #receiptDetails thead td:nth-of-type(4) {
+    text-align: center;
+}
+
+#receiptDetails tbody td {
+    padding: 0 1vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#receiptDetails tbody tr>td:nth-of-type(3), #receiptDetails tbody tr>td:nth-of-type(4), #receiptDetails tfoot td {
+    text-align: right;
+    padding-right: 2vw;
+}
+
+#receiptDetails tfoot tr:first-of-type td {
+    padding-top: 1vw;
+}
+
+
+
+/*==================== Receipt Footer Styles ====================*/
+
+#docFoot a {
+    border: none;
+    font-size: 1.5vw;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0 5%;
+}
+
+#docFoot a:hover {
+    transition: 0.2s;
+    color: rgb(130, 127, 77);
+}
+
+
+
+/*==================== Printing Styles ====================*/
+
+@media print {
+    .printHide {
+        display: none;
+    }
+    body>div:nth-of-type(2) {
+        background: white;
+    }
+    #content {
+        justify-content: start;
+        padding: 20px;
+    }
+    thead, tfoot {
+        display: table-row-group;
+    }
+    #docFoot * {
+        display: none;
+    }
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Thong So Xue
+        Filename:       payment.html
+
+        Description: 
+            This module collects user input and allows users to make payments to their orders. Upon entering 
+            this page, the user is prompted to choose between two payment methods, 'Pay Online' or 'Cash on 
+            Delivery'. After the user has selected a payment method, two sections, namely 'Order Summary' and 
+            'Payment Details' will be visible to the user. The Order Summary section displays a list of all 
+            ordered items and their respective image, description, quantity, price and subtotal, as well as a 
+            totals section that displays the subtotal of all items, the amount of delivery fee, taxes, and 
+            the final total amount at the end of the Order Summary section. On the other hand, the Payment 
+            Details section is a form which collects various input data from the user. The Payment Details 
+            section contains 3 smaller sub-sections, which are Customer Details, Credit Card Details and Other 
+            Details. The Credit Card Details section will show or hide depending on which payment method the 
+            user has chosen. The user can also choose to change its payment method if it wishes to. Lastly, a 
+            submit button which has a text of “Confirm Payment” and the final total amount need to be paid. Upon 
+            clicking the submit button, the user will be redirected to the payment receipt page, which is the 
+            payment-compelete.html page. 
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Payment</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script type="text/javascript" src="js/default-javascipt.js" defer></script>
+    <script type="text/javascript" src="js/cart-js.js" defer></script>
+    <script type="text/javascript" src="js/payment.js" defer></script>
+    <script type="text/javascript" src="js/payment-cartBox.js" defer></script>
+    <script type="text/javascript" src="js/payment-formBox.js" defer></script>
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="payment-slide1.css" />
+    <link rel="stylesheet" href="payment-slide2.css" />
+    <link rel="stylesheet" href="payment-slide2-cartBox.css" />
+    <link rel="stylesheet" href="payment-slide2-formBox.css" />
+    <link rel="stylesheet" href="payment-mobile.css" />
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+    </div>
+
+
+
+    <!--Slide 1: 'Pay Online' or 'Cash on Delivery' prompt overlay-->
+    <div id="slide1">
+        <div id="s1-container">
+            <div id="s1-text-1" class="s1-first">
+                <span>Choose a payment method</span>
+            </div>
+            <div id="s1-btns-1" class="s1-first">
+                <div id="s1-payOnline">Pay Online</div>
+                <div id="s1-cashOnDelivery">Cash on <br />Delivery</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Slide 2-->
+    <div id="slide2">
+        <!--Slide 2 Sub 1: Display current method & allow to change method-->
+        <div id="slide2-sub1" class="slide2-subs">
+            <div id="currentMethod"></div>
+            <div id="changeMethod">Change</div>
+        </div>
+
+        <!--Slide 2 Sub 2: Cart Box & Form Box-->
+        <div id="slide2-sub2" class="slide2-subs">
+            <!--Cart Box: Display the cart items and totals-->
+            <div class="slide2Box" id="cartBox">
+                <div id="cartBoxTitle">Order Summary</div>
+
+                <!--Moved the whole cart from top right into the box-->
+                <div id="dropdown-content">
+                    <div id="cart-item-list">
+                        <ul></ul>
+                        <a class="notJumping">
+                            <div id="cart-checkout">
+                                <span id="total">TOTAL: $<span>0.00</span></span>
+                                <span id="checkoutValid">CHECKOUT</span>
+                                <span id="checkoutInvalid">It's Empty Here :(</span>
+                            </div>
+                        </a>
+
+                        <!--Add a totals section which is absent in the cart-->
+                        <div id="cartBox-totals-section">
+                            <div id="col-1">
+                                <div>Subtotal</div>
+                                <div>Delivery Fee</div>
+                                <div>6% GST</div>
+                            </div>
+                            <div id="col-2">
+                                <div id="cartBox-total-notax">: $<span></span></div>
+                                <div id="cartBox-delivery-fee">: $<span>5.00</span></div>
+                                <div id="cartBox-tax">: $<span></span></div>
+                            </div>
+                            <div id="col-3">
+                                <span>Total</span>
+                                <span id="cartBox-total-taxed">: $<span></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Form Box: A form to collect user inputs, eg: Customer and Payment details-->
+            <div class="slide2Box" id="formBox">
+                <div id="formBoxTitle">Payment Details</div>
+                <div id="formBoxContent">
+                    <form name="paymentDetails" action="javascript:submitForm();" method="POST">
+                        <!--Invisible submit button to be clicked by code-->
+                        <input type="submit" id="submit-form-btn" />
+
+                        <!--Customer details (Required): Name, Email, Contact, Address-->
+                        <fieldset id="custDetails">
+                            <legend>Customer Details *</legend>
+                            <label for="custNameField" class="longInput">Name</label>
+                            <input type="text" id="custNameField" name="custName" class="longInput" required />
+                            <label for="custEmailField" class="longInput">E-mail Address</label>
+                            <input type="email" id="custEmailField" name="custEmail" class="longInput"
+                                placeholder="dummy@gmail.com" required />
+                            <label for="custTelField" class="longInput">Contact No.</label>
+                            <input type="tel" id="custTelField" name="custTel" class="longInput"
+                                placeholder="+60XX-XXXXXXX" pattern="[\+][6][0]\d{8,}" required />
+                            <label for="custAddressField" class="longInput">Address</label><br />
+                            <textarea id="custAddressField" name="custAddress" rows="3" class="longInput"
+                                required></textarea>
+                            <label for="custCityField" class="shortInput">City</label>
+                            <input type="text" id="custCityField" name="custCity" class="shortInput" required />
+                            <label for="custStateField" class="shortInput">State</label>
+                            <select id="custStateField" name="custState" class="shortInput" required>
+                                <option selected style="display: none;"></option>
+                                <optgroup label="Federal Territories">
+                                    <option>Kuala Lumpur</option>
+                                    <option>Labuan</option>
+                                    <option>Putrajaya</option>
+                                </optgroup>
+                                <optgroup label="West Malaysia">
+                                    <option>Johor</option>
+                                    <option>Kedah</option>
+                                    <option>Kelantan</option>
+                                    <option>Melaka</option>
+                                    <option>Negeri Sembilan</option>
+                                    <option>Pahang</option>
+                                    <option>Penang</option>
+                                    <option>Perak</option>
+                                    <option>Perlis</option>
+                                    <option>Selangor</option>
+                                    <option>Terengganu</option>
+                                </optgroup>
+                                <optgroup label="East Malaysia">
+                                    <option>Sabah</option>
+                                    <option>Sarawak</option>
+                                </optgroup>
+                            </select>
+
+                            <label for="custZipField" class="shortInput">Postal Code</label>
+                            <input type="text" id="custZipField" name="custZip" pattern="[0-9]{5}"
+                                class="shortInput" placeholder="XXXXX" required />
+                            <div class="narrowScreen">
+
+                            </div>
+                        </fieldset>
+                        <br />
+
+                        <!--Payment Details (Required if choose to pay online): Credit card type, number, expiry date, CVV-->
+                        <fieldset id="payDetails">
+                            <legend>Credit Card Details *</legend>
+                            <label for="payCardTypeField" class="shortInput">Card Type</label>
+                            <input id="payCardTypeField" list="cardTypes" name="payCardType" class="shortInput">
+                                <datalist id="cardTypes">
+                                    <option>Mastercard</option>
+                                    <option>Visa</option>
+                                    <option>American Express</option>
+                                    <option>Discover</option>
+                                </datalist>
+                            </input>
+                            <label for="payCardNumField" class="shortInput">Card Number</label>
+                            <input type="text" id="payCardNumField" name="payCardNum" class="shortInput"
+                                pattern="[0-9]{13,16}" />
+                            <label for="payCardDateField" class="shortInput">Valid Until</label>
+                            <input type="month" id="payCardDateField" name="payCardDate" class="shortInput" />
+                            <label for="payCardCVVField" class="shortInput">CVV</label>
+                            <input type="text" id="payCardCVVField" name="payCardCVV" pattern="[0-9]{3}"
+                                class="shorterInput" placeholder="XXX" />
+                        </fieldset>
+                        <br />
+
+                        <!--Other Details (Optional): Coupon Codes, Subscribe to newspapers-->
+                        <fieldset id="otherDetails">
+                            <legend>Other Details</legend>
+                            <label for="otherCouponField" class="shortInput">Coupon Codes</label>
+                            <input type="text" id="otherCouponField" name="otherCoupon" pattern=".{8}"
+                                class="shortInput" />
+                            <input type="checkbox" id="otherSubField" name="otherSub" />
+                            <label for="otherSubField">Subscribe to our newspapers. </label>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Slide 2 Sub 3: Display submit button & Final total-->
+        <div id="slide2-sub3" class="slide2-subs">
+            <div>
+                <div id="submit-btn-grp">
+                    <a onclick="paymentFormSubmission()" class="notJumping" href="payment-complete.html">
+                        <div id="submit-confirm">CONFIRM PAYMENT</div>
+                    </a>
+                    <div id="submit-total"><span>Total: $</span><span></span></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Footer, Back to Top Button-->
+        <div>
+            <!--Back to Top Button-->
+            <a href="#" id="back-to-top" class="notJumping">
+                <img src="pics/back-to-top.png" />
+            </a>
+
+
+            <!--Footer-->
+            <footer id="footer">
+                <div>
+                    <ul>
+                        <!--Float Left-->
+                        <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                        <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                        <div class="footerIcons">
+                            <!--Float Right-->
+                            <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                        src="pics/instagram.png" alt="Instagram" /></a>
+                            <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                        src="pics/google+.png" alt="Google+" /></a>
+                            </li>
+                            <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                        src="pics/twitter.png" alt="Twitter" /></a>
+                            </li>
+                            <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                        src="pics/facebook.png" alt="Facebook" /></a></li>
+                            <li id="mediaTooltipLi">
+                                <div id="mediaTooltip"></div>
+                                <div id="mediaTooltipCover"></div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!--Bottom JS-->
+    <script src="js/default-javascipt-after.js"></script>
+</body>
+
+</html>

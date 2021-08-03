@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Thong So Xue
+        Filename:       menu.html
+
+        Description: 
+            This module is the main page for all dishes in our restaurant. It contains two sections, the 
+            first containing the title “Menu” and a search bar, while the second section contains links 
+            to all 5 categories of dishes available in our restaurant menu. The first section’s “Menu” 
+            title not only acts as a title of the page, but is also linked to the second section of the page, 
+            and the search bar below the title can be used to search between all the dishes currently 
+            available in our menu. The second section of the page displays a circle-shaped menu, evenly 
+            divided into 5 sectors, which are the 5 categories of dishes in our menu, namely Meat, 
+            Vegetables, Soups, Dessert and Drinks. Each sector has its own hover animation and is linked 
+            to their respective pages. 
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Menu</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script type="text/javascript" src="js/default-javascipt.js" defer></script>
+    <script type="text/javascript" src="js/cart-js.js" defer></script>
+    <script type="text/javascript" src="js/menu.js" defer></script>
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="menu-s1.css" />
+    <link rel="stylesheet" href="menu-s2.css" />
+    <link rel="stylesheet" href="slide-interval.css" />
+    <link rel="stylesheet" href="menu-mobile.css" />
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Content -->
+    <div id="slide1">
+        <div id="slide1-text">
+            <a class="notJumping" href="#slide2-indent">MENU</a>
+            <input id="searchDishField" type="text" name="searchDish" spellcheck="false" placeholder="Search for a dish..." />
+        </div>
+
+    </div>
+
+    <div class="slide-interval">
+        <div class="interval-box">
+            <span><q>Food is our common ground, a universal experience.</q></span>
+            <span>- James Beard</span>
+        </div>
+    </div>
+
+    <div id="slide2">
+        <div></div>
+        <div id="slide2-indent"></div>
+        <div id="content-container">
+            <img id="plate-bg" src="pics/menu/menu-slide2-plate.png" />
+            <div id="plate-container">
+                <a class="notJumping" href="meat-1.html">
+                    <img id="sector-1" src="pics/menu/menu-slide2-dishSectors.png" />
+                    <div class="plate-hover-text" id="plate-meat">MEAT</div>
+                </a>
+                <a class="notJumping" href="vegetable-1.html">
+                    <img id="sector-2" src="pics/menu/menu-slide2-dishSectors.png" />
+                    <div class="plate-hover-text" id="plate-vege">VEGETABLES</div>
+                </a>
+                <a class="notJumping" href="soup-1.html">
+                    <img id="sector-3" src="pics/menu/menu-slide2-dishSectors.png" />
+                    <div class="plate-hover-text" id="plate-soup">SOUPS</div>   
+                </a>
+                <a class="notJumping" href="dessert-1.html">
+                    <img id="sector-4" src="pics/menu/menu-slide2-dishSectors.png" />
+                    <div class="plate-hover-text" id="plate-dessert">DESSERT</div>
+                </a>
+                <a class="notJumping" href="drinks-1.html">
+                    <img id="sector-5" src="pics/menu/menu-slide2-dishSectors.png" />
+                    <div class="plate-hover-text" id="plate-drinks">DRINKS</div>
+                </a>
+            </div>
+        </div>
+
+        <div id="footer-space"></div>
+
+
+
+        <!--Footer, Back to Top Button-->
+        <div>
+            <!--Back to Top Button-->
+            <a href="#" id="back-to-top" class="notJumping">
+                <img src="pics/back-to-top.png" />
+            </a>
+
+            <!--Footer-->
+            <footer id="footer">
+                <div>
+                    <ul>
+                        <!--Float Left-->
+                        <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                        <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                        <div class="footerIcons">
+                            <!--Float Right-->
+                            <li onmouseenter="tooltipHover('Instagram');"><a
+                                    href="https://instagram.com"><img src="pics/instagram.png" alt="Instagram" /></a>
+                            <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                        src="pics/google+.png" alt="Google+" /></a>
+                            </li>
+                            <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                        src="pics/twitter.png" alt="Twitter" /></a>
+                            </li>
+                            <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                        src="pics/facebook.png" alt="Facebook" /></a></li>
+                            <li id="mediaTooltipLi">
+                                <div id="mediaTooltip"></div>
+                                <div id="mediaTooltipCover"></div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!--Bottom JS-->
+    <script src="js/default-javascipt-after.js"></script>
+</body>
+
+</html>

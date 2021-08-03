@@ -1,0 +1,181 @@
+/*
+    Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wong Kar Yan
+        Filename:       stylesupport.css 
+
+        Function:       Style for support.html
+
+*/
+
+/* Body */
+#content {
+    margin-bottom: 15px;
+    padding-bottom: 900px;   
+}
+
+/* Content */
+div.row {
+    width: 100%;
+    clear: both;
+    padding-top: 100px;
+}
+
+div.row::after {
+    content:"";
+    display: table;
+}
+
+div[class^="col-"] {
+    float: left;
+    padding: 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+/* Header */
+div.head {
+    height: 250px;
+    font-size: 100px;
+    text-align: center;
+    background-image: url("pics/support/background7.jpg");
+    background-size: cover;
+    padding: 50px;
+}
+
+div.head h1 {
+    color: white;
+}
+
+/* Column 1 */
+div.col-1-3 {
+    width: 50%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* Column 2 */
+div.col-2-3 {
+    width: 50%;
+    height: 850px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 200px;
+    background-image: url("pics/support/background14.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Help div */
+div.help {
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', san-serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 5px 10px gold;
+    background-image: url("pics/support/background3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0 , 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+div.help p {
+    color: white;
+}
+
+
+/* Suggestion div */
+div.sugg {
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', san-serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 5px 10px gold;
+    background-image: url("pics/support/background4.jpg");
+    background-repeat: no-repeat;
+   
+}
+
+div.sugg p {
+    color: white;
+}
+
+/*images style*/
+.helpLink {
+    width: 180px;
+    height: 180px;
+    border: 5px solid black;
+    margin-top: 60px;
+}
+
+.overlay {
+    display: block;
+    background-color: rgba(0, 0, 0 , 0.5);
+}
+
+.suggLink {
+    width: 180px;
+    height: 180px;
+    border: 5px solid black;
+    margin-top: 60px;
+}
+
+/* div column 2 */
+div.heading {
+    margin-bottom: 50px;
+    font-size: 80px;
+
+}
+
+#question {
+    margin-top: 90px;
+    line-height: 2;
+}
+
+.header {
+    font-size: 50px; 
+    font-weight: bold;
+    color: white;
+    transform: scale(1,1) translateY(0px);
+    transition: all 1.2s linear;
+    margin-bottom: 50px;
+}
+
+.header:hover {
+    text-shadow: rgb(255, 255, 128) 0px 15px 4px;
+    transform: scale(2,2) translateY(-10px);
+}
+
+.type {
+    font-weight: bold;
+    font-size: 30px;
+    border: 3px solid black;
+    width: 80%;
+}
+
+.submit {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe Script', sans-serif;
+    background-color: rgb(255, 255, 204);
+}
+
+@media screen and (max-width: 600px) {
+
+
+
+#footer>div {
+    margin-top: 350px;
+}
+
+}

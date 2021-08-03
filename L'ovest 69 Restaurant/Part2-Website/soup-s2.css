@@ -1,0 +1,180 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       soup-s2.css
+
+    Function:   Styles for the slide2 section in the soup-1.html page. 
+*/
+
+
+
+/*==================== Slide 2 Overall Styles ====================*/
+
+#slide2:before {
+    background-image: url("pics/soup/soup-1-slide1-bg.jpeg");
+    background-position: 50% 70%;
+    background-size: 120%;
+    opacity: 0.5;
+}
+
+
+
+/*==================== White Vertical Line Styles ====================*/
+
+#slide2-vl-main {
+    height: 0%;
+    border-left: 5px solid white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s cubic-bezier(.25, .98, .53, .99);
+}
+
+#slide2-vl-main.extended {
+    height: 78%;
+    transition: 1s cubic-bezier(.25, .98, .53, .99);
+}
+
+
+
+/*==================== Soup List Box Styles ====================*/
+
+#soup-list-box {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 62%;
+    width: 0%;
+    background: white;
+    transition: 0.2s;
+    z-index: 5;
+}
+
+#soup-list-box.extended {
+    width: 1000px;
+    transition: 0.5s;
+}
+
+#soup-list {
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    float: left;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+#soup-list.boxAppear {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+
+/*==================== Individual Soup Item Styles ====================*/
+
+.soup-item {
+    position: relative;
+    border: 2px solid rgb(69, 69, 69);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    width: 45%;
+    height: 140px;
+    margin: 0px 24px 15px 24px;
+    padding: 8px;
+    float: left;
+    cursor: pointer;
+    transition: transform 0.5s, border 0.5s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.soup-item:hover {
+    border: 5px solid rgb(130, 127, 77);
+    transform: scale(1.025);
+    transition: 0.25s;
+}
+
+.soup-item-name, .soup-item-price {
+    float: left;
+    display: block;
+    color: white;
+    text-shadow: 0px 0px 7px rgba(69, 69, 69, 1);
+    font-family: Britannic;
+    cursor: pointer;
+    user-select: none;
+}
+
+.soup-item-name {
+    font-size: 2rem;
+    word-spacing: -0.2rem;
+}
+
+.soup-item-price {
+    font-size: 1.4rem;
+}
+
+
+
+/*==================== Soup List Pagination Styles ====================*/
+
+#soup-list-pagination {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    top: 71%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0px;
+    width: 142px;
+    background: white;
+    border-radius: 10px;
+    transition: 0.2s;
+    padding: 18px 10px 0px 10px;
+}
+
+#soup-list-pagination.extended {
+    top: 77%;
+    height: 52px;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#soup-list-pagination .pageNo {
+    position: relative;
+    float: left;
+    display: block;
+    padding: 0px;
+    font-size: 1.4rem;
+    user-select: none;
+}
+
+.pageNo a {
+    margin: 15px;
+    cursor: pointer;
+}
+
+#soup-list-pagination .pageNo:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg) scale(0);
+    height: 28px;
+    width: 28px;
+    background: rgba(207, 207, 207, 0.5);
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    transition: 0.2s;
+}
+
+#soup-list-pagination .active:before {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg) scale(1);
+    transition: 0.3s;
+}

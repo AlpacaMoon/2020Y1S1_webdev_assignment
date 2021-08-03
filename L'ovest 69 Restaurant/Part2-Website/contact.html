@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wang Shu Wei
+        Filename:       contact.html
+
+        Function:   This is the html file for contact page that listed down all the contact method for the 
+                    user which are the contact number, email address, location and social media links such as 
+                    Facebook, Twitter and Instagram. By clicking the telephone icon, user can imediately make a 
+                    call to the restaurant and user can also send email after clicking the mail icon. Besides, for
+                    the location's information, there will show a frame of google map under the address and user
+                    can also link it to google map website by clicking the map or location icon. Then, there can
+                    also link to social media website by clicking the social media's icon. When hover the social
+                    media's icon, it will show the name or id of the restaurant that used in these social media.
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Contact Us</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+
+
+    <!--Import Stylesheets-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="contact.css" />
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" style="display: none;"/>
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content-->
+    <h1>Contact Us</h1>
+
+    <div id="content">
+        <div class="content">
+            Contact or send us a message 
+            if you have any question about our restaurant.
+            We will reply you as soon as possible.
+        </div>
+
+        <div id="info">
+
+            <div class="info">
+                <table>
+                    <!--Contact number-->
+                    <tr>
+                        <th>
+                            <a class="image" href="tel:+6076666666"><img src="pics/contact/telephone.png" alt="telephone"/></a>
+                        </th>
+                        <td>
+                            <h3>Telephone</h3>
+                            <p>+607 666 6666</p>
+                        </td>
+                    </tr>
+
+                    <!--Email-->
+                    <tr>
+                        <th>
+                            <a class="image" href="mailto:l'ovest_69@gg.com"><img src="pics/contact/mail.png" alt="mail"/></a>
+                        </th>
+                        <td>
+                            <h3>Mail</h3>
+                            <p>l'ovest_69@gg.com</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="follow">
+                    <h2>Follow us!!</h2>
+                    <!--Social media link-->
+                    <div id="socialMedia">
+                        <table>
+                            <td>
+                                <a href="https://facebook.com"><img src="pics/facebook.png" alt="fb" class="facebook"/></a>
+                                <p>L'ovest 69 Restaurant</p>
+                            </td>
+                            <td>
+                                <a href="https://twitter.com"><img src="pics/twitter.png" alt="twitter" class="twitter"/></a>
+                                <p>id: l'ovest_69</p>
+                            </td>
+                            <td>
+                                <a href="https://instagram.com"><img src="pics/instagram.png" alt="instagram" class="instagram"/></a>
+                                <p>id: l'ovest_69</p>
+                            </td>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!--Location-->
+            <div class="location">
+                <a class="image" href="https://www.google.com.my/maps/@1.5335424,103.6648448,12z"><img src="pics/contact/location.png" alt="location"/></a>
+                <h3>Location</h3>
+                <p>69, Jalan L'ovest 69, Taman L'ovest, 69690 Kuala Lumpur.</p>
+                <!--Google Map-->
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4100.2588442771685!2d101.73072027624973!3d3.216603784930483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3843bfb6a031%3A0x2dc5e067aae3ab84!2sTunku%20Abdul%20Rahman%20University%20College!5e0!3m2!1sen!2smy!4v1599103355870!5m2!1sen!2smy" 
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Wang Shu Wei
+    Filename:       vegetable.css
+
+    Function:   Style for vegetables page.
+*/
+
+
+/* Body */
+body {
+    background-image: url(pics/vegetable/background.jpg);
+    background-size: 1500px 1080px;
+}
+
+#body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Heading */
+#heading {
+    flex: 1 1 200px;
+}
+
+#heading h2 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 150px;
+    margin-top: 0;
+}
+
+#heading h1 {
+    font-size: 10vmin;
+    text-align: center;
+    padding-bottom: 40px;
+    text-shadow: 10px 10px 10px rgba(152, 152, 152, 0.5);
+}
+
+#heading h4 {
+    font-size: 22px;
+    padding: 10px;
+}
+
+/* Content */
+#content {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    float: left;
+    flex: 1 1 800px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Other menu link */
+.menu-link {
+    margin-top: 10px;
+    background-color: rgba(135, 184, 141, 0.7);
+}
+
+.menu-link li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    list-style-type: none;
+    padding: 10px;
+    transition: all 0.25s ease;
+}
+
+.menu-link li:hover {
+    box-shadow: 2px 5px 8px rgba(138, 138, 138, 0.7);
+}
+
+.menu-link a {
+    color: rgb(55, 126, 81);
+}
+
+/* Dishes */
+div.dish {
+    background-color: rgba(184, 241, 175, 0.75);
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    border-radius: 10px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.dish:hover {
+    transition: 0.5s;
+    margin-right: 0;
+    margin-left: 10px;
+    flex: 1 1 350px;
+    box-shadow: 10px 10px 10px rgba(138, 138, 138, 0.7);
+    border: 5px solid rgba(197, 150, 80, 0.5);
+}
+
+.dish::after {
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    content:attr(data-text);
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dish:hover::after {
+    opacity:1;
+    transition: 0.7s;
+}
+
+/* Pictures*/
+.img {
+    flex: 1 1 20%;
+    text-align: left;
+}
+
+.img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid white;
+}
+
+/*Food detail*/
+.detail {
+    flex: 1 1 60%;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+/*Food Name*/
+.detail h3 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* View description button*/
+.view {
+    background-color: rgba(197, 150, 80, 0.5);
+    color: white;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.view:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(142, 113, 75);
+    transition: 0.3s;
+}
+
+/* Food Description*/
+.descript {
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-style: italic;
+    font-size: 18px;
+    text-align: left;
+    display: none;
+}
+
+/* Food Price */
+.price {
+    float: left;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+}
+
+/* Add to cart button */
+.addToCart {
+    background-color: rgb(69, 69, 69);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    width: 50%;
+    transition: all 0.25s ease-out;
+}
+
+.addToCart:hover {
+    box-shadow: 3px 3px 5px rgba(138, 138, 138, 0.7);
+    background-color: white;
+    border: 3px solid rgb(130, 127, 77);
+    padding: 7px;
+    color: rgb(130, 127, 77);
+}

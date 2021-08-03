@@ -1,0 +1,95 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Lee Seng Wai
+    Filename:       meat-1.css
+
+    Function:   Style for meat page.
+*/
+
+/* [ Default Background ] */
+body {
+    background-image: url("pics/meat/background2.jpg");
+    background-size: 1920px 1080px;
+}
+
+
+/* [ Default white semi-transparent bg ] */
+#content {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 8%;
+    height: 1000px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+/* Other menu link */
+.menu-link {
+    margin-top: 10px;
+    background-color: rgba(234, 240, 235, 0.7);
+}
+
+.menu-link li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 30px;
+    list-style-type: none;
+    padding: 10px;
+    transition: all 0.25s ease;
+    background-color: rgba(234, 240, 235, 0.7);
+}
+
+.pic1, .pic2, .pic3 {
+    text-align: center;
+    margin-top: 50px;
+    float: left;
+    width: 33%;
+    font-size: 20px;
+}
+
+.pic1 h3, .pic2 h3, .pic3 h3 {
+    font-size: 25px;
+}
+
+.pic4, .pic5, .pic6 {
+    text-align: center;
+    margin-top: 50px;
+    float: left;
+    width: 33%;
+    font-size: 20px;
+}
+
+.pic4 h3, .pic5 h3, .pic6 h3 {
+    font-size: 25px;
+}
+
+/* Add to cart button */
+.addToCart {
+    background-color: rgb(69, 69, 69);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    float: none;
+    width: 50%;
+}
+
+.addToCart:hover {
+    box-shadow: 3px 3px 5px rgba(138, 138, 138, 0.7);
+    background-color: white;
+    border: 3px solid rgb(130, 127, 77);
+    padding: 7px;
+    color: rgb(130, 127, 77);
+}

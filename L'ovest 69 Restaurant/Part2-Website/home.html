@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Lee Seng Wai
+        Filename:       home.html
+
+        Function:   This module is able to facilitate navigation to other pages on the site by providing 
+                    links to prioritized and recent pages. For example, this module will be linked to about 
+                    us page, catering/event page, menu page, membership page and support page.
+
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Home</title>
+    <link rel="icon" type="pics/png" href="pics/main-logo.png">
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+
+    <!--Embedded Styles-->
+    <style>
+    </style>
+
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content -->
+    <div id="content" class="homeTitle">
+        <h1>WELCOME TO<br />L'OVEST 69 RESTAURANT</h1><br /><br />
+        <div class="picture">
+            <div class="picture1">
+                <a href="meat-1.html"><img src="pics/homepage/meat.jpg" alt="picture" width="150px" height="150px">
+                    <p><br />SERIE DI CARNE<br />MEAT SERIES</p>
+                </a>
+            </div>
+            <div class="picture2">
+                <a href="vegetable-1.html"><img src="pics/homepage/vegetable.jpg" alt="picture2" width="150px" height="150px">
+                    <p><br />SERIE DI VERDURE<br />VEGETABLES SERIES</p>
+                </a>
+            </div>
+            <div class="picture3">
+                <a href="soup-1.html"><img src="pics/homepage/soup.jpg" alt="picture3" width="150px" height="150px">
+                    <p><br />SERIE DI ZUPPE<br />SOUPS SERIES</p>
+                </a>
+            </div>
+            <div class="picture4">
+                <a href="dessert-1.html"><img src="pics/homepage/dessert.jpg" alt="picture4" width="150px" height="150px">
+                    <p><br />SERIE DI DOLCI<br />DESSERT SERIES</p>
+                </a>
+            </div>
+            <div class="picture5">
+                <a href="drinks-1.html"><img src="pics/homepage/drinks.jpg" alt="picture4" width="150px" height="150px">
+                    <p><br />SERIE DI BEVANDE<br />DRINKS SERIES</p>
+                </a>
+            </div>
+        </div>
+        <div class="homepage">
+            <p><br /><br /><br /><br /><br /><br /><br /><br />Here at L'ovest 69 Restaurant, we work with only the best food suppliers like small family farms, insuring that we always have the best and always fresh ingredients. You'll find a large variety of dishes made to satisfy any taste, from meats, vegetables, variety of natural soups, finest desserts and vines.</p>
+        </div>
+    </div>
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

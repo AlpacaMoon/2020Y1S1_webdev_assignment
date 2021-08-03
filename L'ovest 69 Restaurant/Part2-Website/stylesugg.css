@@ -1,0 +1,351 @@
+/*
+    Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wong Kar Yan
+        Filename:       stylesugg.css
+
+        Function:       Style for suggestion page
+
+*/
+
+/* Body */
+#content {
+    position: relative;
+    margin-top: 87px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+}
+
+/* Content */
+div.row1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+div.row1::after {
+    content:"";
+    display: table;
+}
+
+div[class^="col-"] {
+    float: left;
+    padding: 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Header */
+div.header {
+    font-size: 90px;
+    margin-top: 20px;
+}
+
+div.header h1 {
+    color: black;
+}
+
+/* Row 1 */
+div.top {
+    background-image: url("pics/suggestion/background3.jpg");
+    border: 3px solid white;
+    padding: 30px;
+}
+
+form label {
+    color: black;
+}
+
+.type {
+    width: 40%;
+    height: 40px;
+    font-size: 20px;
+    background-color: khaki;
+    border: 3px solid black;
+    color: black;
+}
+
+.placeType {
+    width: 20%;
+    height: 30px;
+    color: yellow;
+    background-color: black;
+    border: 3px solid white;
+}
+
+div.form {
+    margin-top: 5px;
+}
+
+
+.button {
+    background-color: black;
+    border: 2px solid khaki;
+    color: khaki;
+    font-size: 15px;
+    text-align: center;
+    width: 70px;
+    height: 40px;
+}
+
+/* Service */
+div.service {
+    font-size: 30px;
+    margin-top: 150px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    border: 4px solid black;
+    padding: 20px;
+    background-image: url("pics/suggestion/background5.jpg");
+    background-size: cover;
+}
+
+div.service p {
+    color: white;
+}
+
+div.service label {
+    color: white;
+}
+
+/* Meat */
+div.meat {
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    background-image: url("pics/suggestion/background6.png");
+    background-size: cover;
+    border: 4px solid black;
+    padding: 20px;
+    margin-left: 30%;
+}
+
+div.meat p {
+    color: white;
+}
+
+div.meat label {
+    color: white;
+}
+
+/* Vegetable */
+div.vegetable {
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    background-image: url("pics/suggestion/background7.jpg");
+    background-size: cover;
+    border: 4px solid black;
+    padding: 20px;
+}
+
+div.vegetable p {
+    color: white;
+}
+
+div.vegetable label {
+    color: white;
+}
+
+/* Soup */
+div.soup {
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    background-image: url("pics/suggestion/background8.jpg");
+    background-size: cover;
+    border: 4px solid black;
+    padding: 20px;
+    margin-left: 30%;
+}
+
+div.soup p {
+    color: white;
+}
+
+div.soup label {
+    color: white;
+}
+
+/* Dessert */
+div.desert {
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    background-image: url("pics/suggestion/background9.jpg");
+    background-size: cover;
+    border: 4px solid black;
+    padding: 20px;
+}
+
+div.desert p {
+    color: white;
+}
+
+div.desert label {
+    color: white;
+}
+
+/* Drink */
+div.drink {
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    background-image: url("pics/suggestion/background10.jpg");
+    background-size: cover;
+    border: 4px solid black;
+    padding: 20px;
+    margin-left: 30%;
+}
+
+div.drink p {
+    color: white;
+}
+
+div.drink label {
+    color: white;
+}
+
+/* Event */
+div.event {
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    background-image: url("pics/suggestion/background11.jpg");
+    background-size: cover;
+    border: 4px solid black;
+    padding: 20px;
+}
+
+div.event p {
+    color: white;
+}
+
+div.event label {
+    color: white;
+}
+
+/* Membership */
+div.membership {
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70%;
+    background-image: url("pics/suggestion/background12.jpg");
+    background-size: cover;
+    border: 4px solid black;
+    padding: 20px;
+    margin-left: 30%;
+}
+
+div.membership p {
+    color: white;
+}
+
+div.membership label {
+    color: white;
+}
+
+/* footer */
+.footer {
+    text-align: center; 
+    font-size: 150px;
+    margin-top: 100px;
+}
+
+p.footer, p.tq {
+    color: black;
+}
+
+.tq {
+    font-size: 30px;
+    margin-top: 20px;
+    display: none;
+}
+
+.footer:hover + .tq {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+
+    div.service p {
+        font-size: 15px;
+    }
+        
+    div.service label {
+        font-size: 15px;
+    }
+
+    div.meat p {
+        font-size: 15px;
+    }
+        
+    div.meat label {
+        font-size: 15px;
+    }
+    
+    div.vegetable p {
+        font-size: 15px;
+    }
+        
+    div.vegetable label {
+        font-size: 15px;
+    }
+
+    div.soup p {
+       font-size: 15px;
+    }
+    
+    div.soup label {
+       font-size: 15px;
+    }
+    
+    div.dessert p {
+        font-size: 15px;
+    }
+        
+    div.dessert label {
+        font-size: 15px;
+    }
+
+    div.drink p {
+        font-size: 15px;
+    }
+        
+    div.drink label {
+        font-size: 15px;
+    }
+
+    div.event p {
+        font-size: 15px;
+    }
+        
+    div.event label {
+        font-size: 15px;
+    }
+
+    div.membership p {
+        font-size: 15px;
+    }
+        
+    div.membership label {
+        font-size: 15px;
+    }
+
+    .button {
+        width: 45px;
+        font-size: 10px;
+        height: 20px;
+    }
+
+}

@@ -1,0 +1,16 @@
+
+/* [ Default Background ] */
+body {
+    background-image: url("pics/background1.jpg");
+}
+
+
+/* [ Default white semi-transparent bg ] */
+#content {
+    position: relative;
+    margin-top: 87px;
+    margin-bottom: 15px;
+    padding: 30%;
+    height: 1000px;
+    background-color: rgba(255, 255, 255, 0.5);
+}

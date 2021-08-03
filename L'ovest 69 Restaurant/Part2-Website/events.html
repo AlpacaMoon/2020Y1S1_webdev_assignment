@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wang Shu Wei
+        Filename:       events.html
+
+        Function:   This is the html file for events and catering page. This page shows the events' sevices
+                    that have been provided in this reataurant. There are three events which are special 
+                    events, corporate events and social event. After that, each of the event is followed
+                    by there image, description, and example list of the events. Then, there is also a link
+                    to link to booking page at the bottom of the page.
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Events</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+    <script src="js/event-slideshow.js" type="text/javascript" defer></script>
+
+
+    <!--Import Stylesheets-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="events.css" />
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" style="display: none;"/>
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content-->
+    <h1>Event & Catering</h1>
+    
+    <div id="content">
+        <!--Special Events-->
+        <div class="event">
+            <h2>Special Events</h2>
+            <p>Celebrate your memorable and wonderful day by choosing the most suitable venue 
+                at a beautiful atmosphere of L'ovest 69 Restaurant. Our highly professional 
+                staff will be able to meet all your requirementto make your special day beautiful 
+                and enjoyable. Start planning your special event at our exclusive venue!
+            </p>
+            <div class="example">
+                <li>&#10004; Wedding</li>
+                <li>&#10004; Anniversaires</li>
+                <li>&#10004; Baby Showers</li>
+            </div>
+        </div>
+
+        <!-- Slideshow images-->
+        <div class="container">
+            <img class="slideshow1" src="pics/event/special.jpg" />
+            <img class="slideshow1" src="pics/event/special2.jpg" />
+            <img class="slideshow1" src="pics/event/special3.jpg" />
+          
+            <!-- Slideshow button-->
+            <div class="slideshowBtn">
+                <button class="buttonLeft" onclick="plusDivs1(-1)">&#10094;</button>
+                <button class="buttonRight" onclick="plusDivs1(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+        
+
+    <div id="content">
+        <!--Corporate Events-->
+        <div class="event">
+            <h2>Corporate Events</h2>
+            <p>Are you searching a place for having a business event with your teammates?
+                L'ovest 69 Restaurant is an exceptional choice of venue for its facilities
+                and location. Impress them with lunch or dinner in L'ovest 69 Restaurant.
+                No matter of party size and occasion, our catering specialist will plan your 
+                event to meet your needs. Get ready for your business party in our restaurant!
+            </p>
+            <div class="example">
+                <li>&#10004; Meetings</li>
+                <li>&#10004; Team Buildings</li>
+                <li>&#10004; Corporate Parties</li>
+            </div>
+        </div>
+
+        <!-- Slideshow images-->
+        <div class="container">
+            <img class="slideshow2" src="pics/event/corporate.jpg" />
+            <img class="slideshow2" src="pics/event/corporate2.jpg" />
+            <img class="slideshow2" src="pics/event/corporate3.jpg" />
+          
+            <!-- Slideshow button-->
+            <div class="slideshowBtn">
+                <button class="buttonLeft" onclick="plusDivs2(-1)">&#10094;</button>
+                <button class="buttonRight" onclick="plusDivs2(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <!--Social Events-->
+        <div class="event">
+            <h2>Social Events</h2>
+            <p>Between L'ovest 69 Restaurant events team will expertly design and organize
+                your event weather you are celebrating your birthday ,having a family Reunion
+                or something else, we will make it enjoying and memorable. For few years of experience
+                in party planning, we make sure it is a wonderful, enjoying and memorable for you
+                and your guest. Enjoy your party time in L'ovest 69 Restaurant!
+            </p>
+            <div class="example">
+                <li>&#10004; Birthdays</li>
+                <li>&#10004; Family Reunion</li>
+                <li>&#10004; Or Just Because</li>
+            </div>
+        </div>
+
+        <!-- Slideshow images-->
+        <div class="container">
+            <img class="slideshow3" src="pics/event/social.jpg" />
+            <img class="slideshow3" src="pics/event/social2.jpg" />
+            <img class="slideshow3" src="pics/event/social3.jpg" />
+
+            <!-- Slideshow button-->
+            <div class="slideshowBtn">
+                <button class="buttonLeft" onclick="plusDivs3(-1)">&#10094;</button>
+                <button class="buttonRight" onclick="plusDivs3(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Booking link-->
+    <div class="booking">
+        <p>Are you ready for getting an event in L'ovest Restaurant?</p>
+        <a href="booking.html"><span style="font-style: normal;">&#9655;</span> Booking Now !!</a>
+    </div>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

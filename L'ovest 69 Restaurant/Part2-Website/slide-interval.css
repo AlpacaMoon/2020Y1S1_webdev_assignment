@@ -1,0 +1,72 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       slide-interval.css
+
+    Function:   Styles for the slide-interval class sections in the membership.html, menu.html and soup-1.html. 
+*/
+
+
+/*==================== Slide Interval Styles ====================*/
+
+.slide-interval {
+    height: 130px;
+    width: 100%;
+    position: relative;
+    background: white;
+}
+
+.interval-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 40%;
+    width: 60%;
+    transition: 0.5s;
+}
+
+.interval-box span:first-of-type {
+    font-family: 'Courier New', Courier, monospace;
+    quotes: """ """;
+    padding: 5px;
+    font-size: 1em;
+}
+
+.interval-box span:last-of-type {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-style: italic;
+}
+
+
+
+/*==================== Slide Interval Styles for Smaller Screens ====================*/
+
+@media screen and (max-width: 900px) {
+    .interval-box {
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .slide-interval {
+        height: 25vw;
+    }
+
+    .interval-box {
+        height: 65%;
+        width: 80%;
+    }
+    
+    .interval-box span:first-of-type, .interval-box span:last-of-type {
+        font-size: 3vw;
+    }
+
+}

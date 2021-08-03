@@ -1,0 +1,201 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Tan Eng Lip
+    Filename:       member_exclusive.css
+
+*/
+body{
+    background-image: url("pics/member_exclusive/member_exclusive.jpg") ;
+    background-size: cover;
+}
+#content{
+    height: auto;
+    padding:5px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+/*design the row*/
+.row-1-3{
+    position: relative;
+    top:30px;
+    height: 20%;
+    width: 100%;
+}
+.row-2-3{
+    position: relative;
+    top: 10px;
+    clear: both;
+    height:80% ;
+}
+.profile_pic{
+    width: 30%;
+    padding-left: 20%;
+}
+.cust_detail{
+    padding-top:30px;
+    padding-left: 20px;
+    padding-right: 20%;
+    float: left;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.cust_desc{
+    overflow-wrap: break-word;
+}
+/*design the profile picture*/
+.profile_pic img{
+    height: 200px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 10px;
+    float: left;
+}
+
+/*month offer title*/
+.month_offer_title {
+    padding-top: 50px;
+    padding-left: 15%;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/*hide the image*/
+.Slides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 70%;
+    position: relative;
+    margin-left: 15%;
+    margin-right:15%;
+    clear: both;
+    background-color: grey;
+    border: 2px solid black;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;   
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: black;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: .4}   
+    to {opacity: 1}      
+}
+
+/*design the recent bought*/
+.recent_bought{
+    clear: both;
+    margin-top:10px;
+}
+
+/*design the recent bought title*/
+.recent_bought_title{
+    clear: both;
+    padding-left:15% ;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/*design the table*/
+.recent_bought table{
+    width: 70%;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 50px;
+}
+
+.recent_bought_detail tr{
+    height: 40px;
+    padding: 10px;
+}
+
+.recent_bought_detail th,.recent_bought_detail td{
+    padding: 10px;
+    width:30% ;
+    border: 2px solid black;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.recent_bought_detail th{
+    font-weight: bold;
+    font-size: 30px;
+}
+.recent_bought_detail td{
+    font-size: 20px;
+}
+
+/*smart phone and talet size css*/
+@media only screen and (max-width:900px){
+.row-1-3{
+    padding-left: 10%;
+}
+.profile_pic{
+    float: left;
+    width: 30%;
+    padding-left: 10%;
+}
+.profile_pic img{
+    float: right;
+    height: 120px;
+}
+.cust_detail{
+    padding-top: 0px;
+    width:70%;
+    float: right;
+}
+.cust_detail p{
+    font-size:18px ;
+}
+.slideshow-container{
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.recent_bought table{
+    width:80%;
+    margin-left: 10%;
+    font-size: 18px;
+}
+.recent_bought_detail th{
+    font-size: 20px;
+}
+.recent_bought_detail td{
+    font-size: 17px;
+}
+}

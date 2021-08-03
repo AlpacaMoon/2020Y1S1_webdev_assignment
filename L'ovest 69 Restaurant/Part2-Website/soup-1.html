@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Thong So Xue
+        Filename:       soup-1.html
+
+        Description: 
+            This module is one of the sub-categories of the “Menu” module. It contains two sections, the 
+            first section showing the “Soup” title, while the second section displays all available soup 
+            dishes in 3 pages, up to 6 dishes each page. Upon clicking on any soup dish, an overlay covering 
+            the whole screen will show up and display the soup in detail. This overlay contains the soup’s 
+            name, price, image, description, and an Add to Cart button. The add to cart button will add the 
+            specific soup dish to the user’s cart, which will be able to be carried to the payment page 
+            for the payment to be made. 
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Soup</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script type="text/javascript" src="js/default-javascipt.js" defer></script>
+    <script type="text/javascript" src="js/cart-js.js" defer></script>
+    <script type="text/javascript" src="js/soup-1.js" defer></script>
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="soup-s1.css" />
+    <link rel="stylesheet" href="soup-s2.css" />
+    <link rel="stylesheet" href="soup-s3.css" />
+    <link rel="stylesheet" href="soup-s2-overlay.css" />
+    <link rel="stylesheet" href="slide-interval.css" />
+    <link rel="stylesheet" href="soup-mobile.css" />
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Overlay that displays a specific dish-->
+    <div id="overlayBox"></div>
+    <div id="grayOverlay">
+        <span>Click anywhere to close this.</span>
+    </div>
+
+    <!--Snackbar fixed at bottom of screen that jumps to slide3 onclick-->
+    <a href="#slide3" class="notJumping"><div id="slide3Bar" class="hideUnder">Other Dishes</div></a>
+
+    <!--'Soup' Title-->
+    <div id="slide1">
+        <div id="slide1-box">
+            <a class="notJumping" href="#slide2">SOUP</a>
+        </div>
+    </div>
+
+    <!--White Bar-->
+    <div class="slide-interval">
+        <div class="interval-box">
+            <span><q>Good food is the foundation of genuine happiness.</q></span>
+            <span>- Auguste Escoffier</span>
+        </div>
+    </div>
+
+    <!--Soup List Box-->
+    <div id="slide2">
+        <div id="slide2-vl-main"></div>
+        <div id="soup-list-box">
+            <div id="soup-list"></div>
+        </div>
+        <div id="soup-list-pagination">
+            <div class="pageNo active"><a class="notJumping">1</a></div>
+            <div class="pageNo"><a class="notJumping">2</a></div>
+            <div class="pageNo"><a class="notJumping">3</a></div>
+        </div>
+    </div>
+
+    <!--White Bar-->
+    <div class="slide-interval"></div>
+
+    <!--Link to other foods-->
+    <div id="slide3">
+        <!--Content-->
+        <div id="foodBtns">
+            <div>
+                <a href="meat-1.html"><li class="foodBtn"><span>Meat</span><div></div></li></a>
+                <a href="dessert-1.html"><li class="foodBtn"><span>Dessert</span><div></div></li></a>
+            </div>
+            <div>
+                <a href="vegetable-1.html"><li class="foodBtn"><span>Vegetables</span><div></div></li></a>
+                <a href="drinks-1.html"><li class="foodBtn"><span>Drinks</span><div></div></li></a>
+            </div>
+        </div>
+
+
+        <!--Footer, Back to Top Button & bottom JS-->
+        <div>
+            <!--Back to Top Button-->
+            <a href="#" id="back-to-top" class="notJumping">
+                <img src="pics/back-to-top.png" />
+            </a>
+
+            <!--Footer-->
+            <footer id="footer">
+                <div>
+                    <ul>
+                        <!--Float Left-->
+                        <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                        <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                        <div class="footerIcons">
+                            <!--Float Right-->
+                            <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                        src="pics/instagram.png" alt="Instagram" /></a>
+                            <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                        src="pics/google+.png" alt="Google+" /></a>
+                            </li>
+                            <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                        src="pics/twitter.png" alt="Twitter" /></a>
+                            </li>
+                            <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                        src="pics/facebook.png" alt="Facebook" /></a></li>
+                            <li id="mediaTooltipLi">
+                                <div id="mediaTooltip"></div>
+                                <div id="mediaTooltipCover"></div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!--Bottom JS-->
+    <script src="js/default-javascipt-after.js"></script>
+</body>
+
+</html>

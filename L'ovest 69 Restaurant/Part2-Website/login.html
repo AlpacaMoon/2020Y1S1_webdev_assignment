@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Tan Eng Lip
+        Filename:       login.html
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Login</title>
+    <link rel="icon" type="Image/png" href="pics/main-logo.png"/>
+    
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+    <script src="js/login.js" type="text/javascript" defer></script>
+
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="login.css" />
+
+    <!--Embedded Styles-->
+    <style>
+        #content {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+        }
+    </style>
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content -->
+    <div id="content">
+        <div class="title">
+            <p>USER LOGIN</p>
+        </div>
+        <form id="login" method="POST" action="member-exclusive.html">
+            <fieldset>
+                <div class="main">
+                    <div>
+                        <label for="username" class="username">
+                            <p>Username:</p>
+                        </label>
+                        <input type="text" name="username" id="username" placeholder="" autocomplete="off" required>
+                    </div>
+                    <div>
+                        <label for="password" class="password">
+                            <p>Password:</p>
+                        </label>
+                        <input type="password" name="password" id="password" placeholder="" autocomplete="off" required>
+                    </div>
+                    <div>
+                        <button type="button" value="Login" onclick="checking()">Login</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div class="second">
+            <p style="text-align: center;">New Member? <a href="create-account.html">Create an account.</a> </p>
+        </div>
+    </div>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Tan Eng Lip
+    Filename:       dessert.css
+
+*/
+#content{
+    padding: 0%;
+    height: 620px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*column style*/
+
+.col-1-3{
+    width:30%;
+    height:500px;
+    margin-top:50px;
+    padding-top: 110px;
+    padding-left: 20px;
+    border-right: 2px solid black;
+    float:left;
+}
+.col-1-3 p{
+    font-size: 7vw;
+}
+.col-2-3{
+    width:70%;
+    float: right;
+}
+/*img size*/
+.col-1-3 img{
+    width: 20%;
+}
+.col-2-3 img{
+    width: 13%;
+
+}
+/*design button*/
+.col-2-3 button{
+    clear: both;
+    background-color: #039203;
+    border: 2px solid #333333;
+    box-shadow: 2px 2px #333333;
+    height: 30px;
+    width: 13%;
+    margin-top: 15px;
+    border-radius: 5px;
+    align-items: right;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.col-2-3 button:hover{
+    background-color: #047404;
+}
+/*float the img*/
+div [class^="dessert"] img{
+    border: 2px solid #0d0d0d;
+    border-radius:5px;
+    box-shadow:2px 1px #333333;
+    float:left;
+    margin-right: 3%;
+}
+
+
+/*design div size*/
+div[class^="dessert"]{
+    margin-bottom: 5px;
+    clear: both;
+    padding: 3%;
+}
+
+/*design the font*/
+div[class^="dessert"] p{
+    font-style: italic;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.price{
+    font-weight: 800;
+}
+
+/*smart phone and tablet css*/
+@media only screen and (max-width:900px)
+{
+#content{
+    height: 750px;
+}
+.col-1-3{
+    margin: 0 0% 0px 23%;
+    padding-top: 0px;
+    height: 100px;
+    width: 60%;
+    border-right: none;
+}
+.col-1-3 p{
+    float: left;
+}
+.col-1-3 img{
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+
+.col-2-3{
+    clear: both;
+    width: 100%;
+
+}
+.hidden{
+   display: none;
+}
+.col-2-3 img{
+    width: 20%;
+}
+.col-2-3 button{
+    width:20%
+}
+
+}

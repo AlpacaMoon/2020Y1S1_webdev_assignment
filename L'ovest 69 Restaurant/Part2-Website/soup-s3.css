@@ -1,0 +1,142 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       soup-s3.css
+
+    Function:   Styles for the slide3 section in the soup-1.html page. 
+*/
+
+
+
+/*==================== Snackbar Styles ====================*/
+
+#slide3Bar {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: white;
+    color: rgb(69, 69, 69);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25vw;
+    font-weight: 800;
+    transition: 0.3s;
+    text-align: center;
+    padding: 0.5vw 1vw;
+}
+
+#slide3Bar.hideUnder {
+    bottom: -100px;
+}
+
+#slide3Bar:hover {
+    padding-bottom: 1.5vw;
+}
+
+
+
+/*==================== Slide 3 Overall Styles ====================*/
+
+#slide3:before {
+    background-image: url("pics/soup/soup-1-slide1-bg.jpeg");
+    background-position: 50% 70%;
+    background-size: 120%;
+    opacity: 0.5;
+}
+
+#slide3 {
+    height: 900px;
+}
+
+
+
+/*==================== Food Buttons Styles ====================*/
+
+#foodBtns {
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foodBtn {
+    position: relative;
+    background: rgb(69, 69, 69);
+    height: 20vw;
+    width: 20vw;
+    border: 4px solid rgb(69, 69, 69);
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.foodBtn span {
+    position: absolute;
+    color: white;
+    text-shadow: rgb(69, 69, 69) 0 0 2px;
+    font-size: 3vw;
+    z-index: 1;
+    transition: 0.25s;
+}
+
+.foodBtn div {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+a[href="meat-1.html"] div {
+    background: url("pics/soup/s3-meat.jpg") no-repeat center/cover;
+}
+
+a[href="meat-1.html"] span {
+    bottom: 1vw;
+    right: 1vw;
+}
+
+a[href="vegetable-1.html"] div {
+    background: url("pics/soup/s3-vege.jpg") no-repeat center/cover;
+}
+
+a[href="vegetable-1.html"] span {
+    bottom: 1vw;
+    left: 1vw;
+}
+
+a[href="dessert-1.html"] div {
+    background: url("pics/soup/s3-dessert.jpeg") no-repeat center/cover;
+}
+
+a[href="dessert-1.html"] span {
+    top: 1vw;
+    right: 1vw;
+}
+
+a[href="drinks-1.html"] div {
+    background: url("pics/soup/s3-drinks.jpeg") no-repeat center/cover;
+}
+
+a[href="drinks-1.html"] span {
+    top: 1vw;
+    left: 1vw;
+}
+
+
+
+/*==================== Food Button Hover Styles ====================*/
+
+#slide3 a:hover .foodBtn div {
+    opacity: 1;
+}
+
+#slide3 a:hover .foodBtn {
+    transform: scale(1.075);
+    z-index: 5;
+}
+
+#slide3 a:hover span {
+    font-size: 3.5vw;
+}

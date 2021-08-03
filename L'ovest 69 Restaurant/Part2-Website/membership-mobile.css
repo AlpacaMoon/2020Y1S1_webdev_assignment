@@ -1,0 +1,186 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       membership-mobile.css
+
+    Function:   Styles for membership.html on smaller screens.
+                Adjustments to fit elements on smaller screens.
+                The 'Login' & 'Create an Account' buttons are rearranged vertically to fit into smaller screens.
+*/
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 900px) {
+
+    #s1-container {
+        width: 90%;
+    }
+
+    #slide2 {
+        height: 160vw;
+    }
+
+    #s2-main {
+        padding-top: 15vw;
+        height: 150vw;
+    }
+
+    #s2-container {
+        width: 85%;
+    }
+
+    #s2-container > div:first-of-type {
+        font-size: 6vw;
+        height: 12vw;
+    }
+
+    #benefit-list li span {
+        font-size: 4vw;
+    }
+    
+    #benefit-list li:hover span {
+        font-size: 6vw;
+    }    
+
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 768px) {
+
+    #s1-container {
+        height: 50vw;
+    }
+
+    #s1-container > div:first-of-type {
+        font-size: 12vw;
+        line-height: 12.5vw;
+    }
+    
+    #s1-container > div:first-of-type:hover {
+        font-size: 13vw;
+        line-height: 13.5vw;
+    }
+
+    #s1-container > div:first-of-type.btnHovered {
+        font-size: 10vw;
+        line-height: 10.5vw;
+    }
+
+    .s1-btns {
+        font-size: 4.5vw;
+    }
+
+    .s1-btns.btnHovered {
+        border: 2vw outset rgb(230, 230, 230);
+    }
+
+    #intervalOR {
+        font-size: 5.5vw;
+    }
+
+    #loginPgHref.btnHovered {
+        font-size: 7.5vw;
+    }
+    
+    #registerPgHref.btnHovered {
+        font-size: 6.5vw;
+    }
+}
+
+/* The 'Login' & 'Create an Account' buttons are rearranged vertically to fit into screen */
+@media screen and (max-width: 600px) {
+
+    #s1-container {
+        height: 85vw;
+    }
+
+    #s1-container > div:first-of-type, #s1-container > div:first-of-type.btnHovered {
+        height: 25%;
+        font-size: 7vw;
+        line-height: 7.5vw;
+        background: rgb(69, 69, 69);
+        color: white;
+    }
+    
+    #s1-container > div:first-of-type:hover {
+        height: 25%;
+        font-size: 8vw;
+        line-height: 8.5vw;
+    }
+
+    #s1-container > div:nth-of-type(2) {
+        flex-flow: column;
+        height: 70%;
+    }
+
+    #s1-container > div:nth-of-type(2).btnHovered {
+        height: 70%;
+    }
+
+    #s1-container .s1-btns {
+        width: 100%;
+        height: 50%;
+        border: 4px solid rgb(69, 69, 69);
+        font-size: 8vw;
+    }
+
+    #s1-container .s1-btns.btnHovered {
+        width: 100%;
+        height: 50%;
+        border: 12px outset rgb(230, 230, 230);
+    }
+
+    #loginPgHref.btnHovered {
+        font-size: 11vw;
+    }
+
+    #registerPgHref.btnHovered {
+        font-size: 9.5vw;
+    }
+
+    #s1-container #intervalOR {
+        display: none;
+    }
+
+    #s1-container > div:last-of-type a:hover::after {
+        bottom: -4vw;
+    }
+
+    #s1-container > div:last-of-type {
+        font-size: 3vw;
+    }
+
+    #benefit-list li:hover span {
+        font-size: 7vw;
+    }
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 480px) {
+
+    #slide1 {
+        height: 150vw;
+    }
+
+    #s1-container {
+        top: 85vw;
+    }
+
+    #benefit-list li {
+        height: 12vw;
+    }
+
+    #benefit-list li:hover {
+        height: 60vw;
+    }
+
+    #slide2 {
+        height: 180vw;
+    }
+
+    #s2-main {
+        height: 170vw;
+    }
+
+}

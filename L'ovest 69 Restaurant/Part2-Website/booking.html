@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wang Shu Wei
+        Filename:       booking.html
+
+        Function:   This is a booking page for booking a place for event or other purpose. User can 
+                    make a booking by completing the booking form and submiting it. User are required 
+                    to insert his/her name, email, contact number, bookingdate, starting time, ending 
+                    time and number of people. The number of people should be 5 until 500 people only.
+                    After that, the user can choose the event type for booking such as special special 
+                    event, corporate event and social event. Besides this choice, user can also select 
+                    the choice for other purpose by entering the purpose beside the selection. Lastly, 
+                    User might have to write down their comment about the booking purpose. Then, 
+                    submiting the form by clicking the "book" button. If submiting successful, this page 
+                    will give an alert.
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Booking</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+    <script src="js/booking.js" type="text/javascript" defer></script>
+
+
+    <!--Import Stylesheets-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="booking.css" />
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" style="display: none;"/>
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content-->
+    <div id="body">
+
+        <!--Heading-->
+        <div id="heading">
+            <h1>Booking</h1>
+        </div>
+    
+        <!--Booking Form-->
+        <div id="content">
+            <h2>L'ovest 69 Restaurant</h2>
+            <h3>&#9476;&#9476;&#9476; Booking form &#9476;&#9476;&#9476;</h3>
+            <form name="bookingForm" action="bookingSuccess.html" method="POST" onsubmit="booking()">
+                <fieldset class="detail">
+                    <label for="name">Name </label>
+                    <input name="name" id="name" type="text" placeholder="Full Name" pattern="[A-Za-z ]+" required/><br/>
+
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" placeholder="email@xx.com" required/><br/>
+
+                    <label for="contactNo">Contact No.</label>
+                    <input name="contactNo" id="contactNo" type="text" placeholder="+60XXXXXXXXX" pattern="[+][6][0][0-9]{9,}" required/><br/>
+
+                    <label for="date">Date</label>
+                    <input name="date" id="date" type="date" required/><br/>
+
+                    <label for="time">Time</label>
+                    <input name="start-time" id="start-time" type="time" required/>
+                    <span>until</span>
+                    <input name="end-time" id="end-time" type="time" required/><br/>
+
+                    <label for="no-people">No. of People</label>
+                    <input name="no-people" id="no-people" type="number" min="5" max="500" placeholder="5 until 500 people" required/>
+                </fieldset>
+                
+
+                <fieldset class="eventType">
+                    <label>What kind of event you want to do ?</label><br/>
+                    <div class="eventType">
+                        <div class="selection">
+                            <input type="radio" name="eventType" id="specialEvent" value="specialEvent"/>
+                            <label for="specialEvent">Special Event</label>
+                        </div>
+                        <div class="selection">
+                            <input type="radio" name="eventType" id="corporateEvent" value="corporateEvent"/>
+                            <label for="corporateEvent">Corporate Event</label>
+                        </div>
+                        <div class="selection">
+                            <input type="radio" name="eventType" id="socialEvent" value="socialEvent"/>
+                            <label for="Social Event">Social Event</label>
+                        </div>
+                        <div class="selection">
+                            <input type="radio" name="eventType" id="other" value="other" checked/>
+                            <label for="other">Other</label>
+                            <input type="text" name="other" id="otherType" required/>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="comment">
+                    <label for="comment">Comment</label><br/>
+                    <textarea name="comment" id="comment" type="text" placeholder="Comment about your event. And what can we help you?"></textarea><br/>
+                </fieldset>
+
+                <button id="book" type="submit"></button>
+            </form>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

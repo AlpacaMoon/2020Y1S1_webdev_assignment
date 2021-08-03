@@ -1,0 +1,281 @@
+/* RESET STYLES */
+
+/* Structural Styles */
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block;
+}
+
+/* Typographic Styles */
+
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, ol, p, section, span, ul {
+    background: transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+nav ul {
+    list-style: none;
+    list-style-image: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+    padding-top: 100px;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Script MT Bold';
+    src: url(ScriptMTBold.ttf);
+}
+
+
+
+/* Top of Page */
+#top-of-page {
+    position: absolute;
+    top: -100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* HEADER STYLE */
+
+* {
+    box-sizing: border-box;
+}
+
+#header {
+    background-color: #F6F1EE;
+    width: 100%;
+    padding: 20px 15px 10px 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0px;
+    transition: 0.2s;
+    z-index: 3;
+    overflow-x: hidden;
+}
+
+#navbar li {
+    float: left;
+    display: block;
+    text-align: center;
+    font-family: 'Script MT Bold';
+    font-size: 2em;
+    line-height: 2;
+}
+
+#navbar li.navLink {
+    width: 19%;
+}
+
+#navbar li.navLogo {
+    width: 19%;
+    line-height: 1;
+}
+
+#navbar li.navLogo img {
+    width: 100%;
+}
+
+.navLink a, #cart-icon {
+    color: #239ECE;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.navLink a:hover, .navLink a:active {
+    color: hsl(39, 77%, 75%);
+    text-decoration: none;
+    font-size: 1.2em;
+    line-height: 1;
+    transition-duration: 0.2s;
+}
+
+#cart-icon:hover, #cart-icon:active {
+    color: hsl(39, 77%, 75%);
+    text-decoration: none;
+    font-size: 1.7em;
+    transition-duration: 0.2s;
+}
+
+/* CART DROPDOWN */
+
+#cart-icon {
+    background-color: #F6F1EE;
+    font-size: 3rem;
+    line-height: 0;
+    z-index: 4;
+    vertical-align: 5px;
+}
+
+#dropdown-content {
+    display: none;
+    position: fixed;
+    left: 80%;
+    width: 20%;
+    background-color: #F6F1EE;
+    box-shadow: -2px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 5;
+    top: 90px;
+}
+
+.dropdown-hitbox {
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+
+#dropdown-hitbox-1 {
+    left: 75%;
+    top: 0px;
+    padding: 200px;
+}
+
+#dropdown-hitbox-2 {
+    width: 100%;
+    top: 93px;
+    padding-bottom: 30px;
+}
+
+.cart-title {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.cart-item {
+    display: block;
+    width: 100%;
+    color: #239ECE;
+    border: 2px solid hsl(39, 77%, 75%);
+    border-radius: 3px;
+    float: left;
+    clear: left;
+    padding: 15px;
+    margin-bottom: 3px;
+}
+
+/* FOOTER */
+
+#footer {
+    background-color: #F6F1EE;
+    height: 200px;
+    padding: 10px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#footer .col {
+    height: 60px;
+}
+
+#footer col::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+#footer .footer-btn button {
+    position: absolute;
+    left: 25%;
+    border: hidden;
+    font-size: 1.5em;
+}
+
+#footer #back-to-top-space {
+    float: right;
+    clear: right;
+    width: 20%;
+    padding: 1px;
+}
+
+#footer a.fa{
+    color: #239ECE;
+    float: right;
+    font-size: 20px;
+    width: 1.5em;
+    height: 2em;
+    padding-top: 12px;
+    padding-right: 10px;
+    transition-duration: 0.2s;
+}
+
+#footer a.fa:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    padding-top: 11px;
+    transition-duration: 0.2s;
+}
+
+#footer #OurSocialMedia {
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    color: #199dd1;
+    font-size: 1.6em;
+    font-family: Helvetica, sans-serif;
+}
+
+#footer .VerticalText {
+    display: none;
+    position: absolute;
+    writing-mode: vertical-lr;
+    padding-left: 5px;
+    top: 95%;
+    color: #199dd1;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+}
+
+#footer #vInstagram {
+    right: 25%;
+}
+
+#footer #vGPlus {
+    right: 35%;
+}
+
+#footer #vTwitter {
+    right: 43%;
+}
+
+#footer #vFacebook {
+    right: 51%;
+}
+
+#footer #scMedia {
+    height: 100%;
+}
+
+
+
+/* Back To Top Button */
+#back-to-top {
+    display: block;
+    position: fixed;
+    right: -70px;
+    bottom: 3%;
+    color: #239ECE;
+    font-size: 3.5em;
+    transition-duration: 0.5s;
+}
+
+#back-to-top:nth-of-type(2) #back-to-top:nth-of-type(4) {
+    clear: right;
+}

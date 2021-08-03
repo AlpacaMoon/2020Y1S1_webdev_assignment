@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Lee Seng Wai
+        Filename:       meat-1.html
+
+        Function:   This page shows all the meats that are sold in this restaurant with 
+                    their specific details and prices. Besides, The user can see his cart 
+                    by clicking the cart’s button. In this cart, the user is able to change 
+                    the quantity of food or remove the list from the cart. This page also 
+                    can link to the other menu like vegetables, soup desserts and drinks page.
+
+
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Meat</title>
+    <link rel="icon" type="pics/png" href="pics/main-logo.png">
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+
+    <!--Embedded Styles-->
+    <style>
+
+    </style>
+
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="meat-1.css" />
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content -->
+    <div id="content">
+        <!--Heading-->
+        <div id="heading">
+            <h1>MEAT</h1>
+
+            <!--Other Menu Link-->
+            <div class="menu-link">
+                <ul>
+                    <li><a href="vegetable-1.html">VEGETABLES</a></li>
+                    <li><a href="soup-1.html">SOUP</a></li>
+                    <li><a href="dessert-1.html">DESSERT</a></li>
+                    <li><a href="drinks-1.html">DRINKS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Dish 1-->
+        <!--Picture-->
+        <div class="pic1">
+            <img src="pics/meat/meat1.jpg" width="220px" height="130px" />
+            <!--Food detail-->
+            <div class="detail">
+                <!--Food name and price-->
+                <h3>Beef Fillet Steak with Mushrooms</h3>
+                <!--Food price-->
+                <h3 class="price">$20.00</h3>
+                <!--Food description-->
+                <p class="descript">A beef steak dinner marinated in black pepper sauce, grilled and served with
+                    mushrooms.</p><br />
+                <!--Add to cart button-->
+                <button class="addToCart"
+                    onclick="addToCart('Beef Fillet Steak with Mushrooms', 20.00, 1, 'pics/meat/meat1.jpg', 'meat-1.html', 'A stunning and delicious dish that can make your taste buds feel tasty.')">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+
+        <!--Dish 2-->
+        <div class="pic2">
+            <img src="pics/meat/meat2.jpg" width="220px" height="130px" />
+            <!--Food detail-->
+            <div class="detail">
+                <!--Food name-->
+                <h3>Beef Wellington</h3>
+                <!--Food price-->
+                <h3 class="price">$25.00</h3>
+                <!--Food description-->
+                <p class="descript">An English pie made of medium rare fillet steak coated with pâté and duxelles,
+                    wrapped in baked parma ham and puff pastry.</p>
+                <!--Add to cart button-->
+                <button class="addToCart" onclick="addToCart('Beef Wellington', 25.00, 1, 'pics/meat/meat2.jpg', 'meat-1.html', 
+                'One of the most famous signature dish in our restaurant.')">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+
+        <!--Dish 3-->
+        <div class="pic3">
+            <img src="pics/meat/meat3.jpg" width="220px" height="130px" />
+            <!--Food detail-->
+            <div class="detail">
+                <!--Food name-->
+                <h3>Pork Chop</h3>
+                <!--Food price-->
+                <h3 class="price">$18.00</h3>
+                <!--Food description-->
+                <p class="descript">This pork chop has variety choices with sauce like black pepper sauce, barbeque sauce and sweet mushroom sauce.</p>
+                <!--Add to cart button-->
+                <button class="addToCart" onclick="addToCart('Pork Chop', 18.00, 1, 'pics/meat/meat3.jpg', 'meat-1.html', 
+                'This dish is taste extraordinary when you eat the pork chop with delicious sauce.')">
+                    ADD TO CART
+                </button>
+            </div>
+            <br />
+        </div>
+
+        <!--Dish 4-->
+        <div class="pic4">
+            <img src="pics/meat/meat4.jpg" width="220px" height="130px" />
+            <!--Food detail-->
+            <div class="detail">
+                <!--Food name-->
+                <h3>Lemon Garlic Lamb Chop</h3>
+                <!--Food price-->
+                <h3 class="price">$23.00</h3>
+                <!--Food description-->
+                <p class="descript">A traditional Italian food grilled with lemon juice and garlic, and some light
+                    dusting of lemon zest.</p><br />
+                <!--Add to cart button-->
+                <button class="addToCart" onclick="addToCart('Lemon Garlic Lamb Chop', 12.50, 1, 'pics/meat/meat4.jpg', 'meat-1.html', 
+                'This dish is delicious and healthy and also contains of incredible sour taste.')">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+
+
+        <!--Dish 5-->
+        <div class="pic5">
+            <img src="pics/meat/meat5.jpg" width="220px" height="130px" />
+            <!--Food detail-->
+            <div class="detail">
+                <!--Food name-->
+                <h3>Chicken Chop</h3>
+                <!--Food price-->
+                <h3 class="price">$17.00</h3>
+                <!--Food description-->
+                <p class="descript">Chicken Chop drizzled with coleslaw, barbeque sauce and french fries seasoned with black
+                    pepper and salt.</p>
+                <!--Add to cart button-->
+                <button class="addToCart" onclick="addToCart('Chicken Chop', 17.00, 1, 'pics/meat/meat5.jpg', 'meat-1.html', 
+                'It is a fresh chicken chop to perk up any spring or summer meal.')">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+
+
+        <!--Dish 6-->
+        <div class="pic6">
+            <img src="pics/meat/meat6.jpg" width="220px" height="130px" />
+            <!--Food detail-->
+            <div class="detail">
+                <!--Food name-->
+                <h3>Fish & Chips</h3>
+                <!--Food price-->
+                <h3 class="price">$19.50</h3>
+                <!--Food description-->
+                <p class="descript">This dish is coated in batter and fried fish with deep-fried chips.</p><br />
+                <!--Add to cart button-->
+                <button class="addToCart" onclick="addToCart('Fish & Chips', 19.50, 1, 'pics/meat/meat6.jpg', 'meat-1.html', 
+                'It is an amazing dish with the fresh fish and chips.')">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

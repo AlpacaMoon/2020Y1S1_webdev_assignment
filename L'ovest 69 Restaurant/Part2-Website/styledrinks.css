@@ -1,0 +1,225 @@
+/*
+    Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wong Kar Yan
+        Filename:       styledrinks.css
+
+        Function:       Style for drink page
+
+*/
+
+
+/* Body */
+#content {
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 1250px;
+}
+
+/* Header */
+div.header {
+    height: 200px;
+    padding-top: 50px;
+    text-align: center;   
+    margin-top: 30px;
+    background-image: url("pics/drink/background10.jpg");
+    background-size: cover;
+}
+
+div.header h1 {
+    color: white;
+    font-family: 'Cooper Black', sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+div.heading {
+    background-color: rgb(153, 153, 153);
+    height: 40px;
+    color: black;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+/* Content */
+div.row1 {
+    width: 100%;
+    clear: both;
+}
+
+div.row1::after {
+    content:"";
+    display: table;
+}
+
+div[class^="col-"] {
+    float: left;
+    padding: 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*Column 1 */
+div.col-1-1 {
+    width: 45%;
+    height: 1200px;
+    background-image: url("pics/drink/background13.jpg");
+    background-size: cover;
+
+}
+
+/* Links */
+.link a {
+    display: block;
+    color: white;
+    font-size: 20px;
+    float: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.link a:hover {
+    background-color: #111;
+}
+
+/* Next button */
+div.next a{
+    color: white;
+    font-size: 40px;
+    margin-top: 1000px;
+    float: right;
+}
+
+.remind {
+    display: none;
+}
+
+div.next a:hover + .remind {
+    opacity: 0.8;
+    background-color: white;
+    border: 2px solid black;
+    width: 30%;
+    padding: 10px;
+    display: block;
+    float: right;
+    margin-top: 950px;
+    margin-right: 10px;
+}
+
+/* Column 2 */
+div.col-1-2 {
+    width: 55%;
+}
+
+/* Drinks */
+div.drink {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.desc {
+    clear: right;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 20px;
+    margin-left: 35%;
+}
+
+.addtocart {
+    background-color: gray;
+    border: 4px solid black;
+    color: white;
+    height: 40px;
+}
+
+.addtocart:hover {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    height: 50px;
+}
+
+.pics {
+    width: 30%;
+    height: 160px;
+    border: 3px solid black;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    position: relative;     
+    background: rgba(0, 0, 0, 0.5); 
+    width: 30%;
+    transition: .5s ease;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    float: left;
+    margin-left: -30%;
+    
+}
+
+.pics:hover + .overlay {
+    opacity: 1;
+    display: block;
+}
+
+.message {
+    display: none;
+}
+
+.heading:hover + .message {
+    display: block;
+    color: gray;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    
+.overlay {
+    font-size: 15px;  
+}
+
+#footer>div {
+    margin-top: 1700px;
+}
+
+div.desc {
+    font-size: 20px;
+}
+
+div.col-1-1 {
+    height: 1700px;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+
+.overlay {
+    font-size: 10px;
+    text-align: center;   
+}
+
+#footer>div {
+    margin-top: 1700px;
+}
+
+div.desc {
+    font-size: 15px;
+}
+
+div.col-1-1 {
+    height: 1700px;
+}
+
+}
+

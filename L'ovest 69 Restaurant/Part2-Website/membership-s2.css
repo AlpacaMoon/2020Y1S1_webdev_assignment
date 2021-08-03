@@ -1,0 +1,120 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       membership-s2.css
+
+    Function:   Styles for the slide2 section in the membership.html page.
+*/
+
+/*=================== Slide 2 Overall Styles ===================*/
+
+#slide2::before {
+    background: url('pics/membership/membership-bg.jpeg') no-repeat fixed center/cover;
+    opacity: 0.5;
+}
+
+#slide2 {
+    height: 900px;
+    position: relative;
+}
+
+#s2-main {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+#s2-container {
+    height: 100%;
+    width: 850px;
+}
+
+
+
+/*=================== Benefit List Styles ===================*/
+
+#s2-container > div:first-of-type {
+    height: 20%;
+    background: rgb(69, 69, 69);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+#s2-container #benefit-list {
+    border: 3px solid rgb(69, 69, 69);
+    background: rgb(69, 69, 69);
+}
+
+/*=================== Styles for Benefit List Items ===================*/
+
+#benefit-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: 3px solid rgb(69, 69, 69);
+    height: 50px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+}
+
+#benefit-list li:hover {
+    height: 250px;
+    transition: 0.4s ease-in-out;
+}
+
+#benefit-list li span {
+    z-index: 1;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.25s ease-in-out;
+}
+
+#benefit-list li:hover span {
+    font-size: 3rem;
+    font-weight: bold;
+    transition: 0.25s ease-in-out;
+}
+
+#benefit-list li::before {
+    content: '';
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: no-repeat center/cover;
+}
+
+/* Background Image for each list item */
+
+#benefit-list li:first-of-type::before {
+    background-image: url('pics/membership/membership-benefit-1.jpg');
+}
+
+#benefit-list li:nth-of-type(2)::before {
+    background-image: url('pics/membership/membership-benefit-2.jpg');
+}
+
+#benefit-list li:nth-of-type(3)::before {
+    background: url('pics/membership/membership-benefit-3.jpeg') 50% 70%/cover no-repeat;
+}
+
+#benefit-list li:nth-of-type(4)::before {
+    background-image: url('pics/membership/membership-benefit-4.jpg');
+}
+
+#benefit-list li:nth-of-type(5)::before {
+    background: url('pics/membership/membership-benefit-5.jpg') 50% 75%/cover no-repeat;
+}

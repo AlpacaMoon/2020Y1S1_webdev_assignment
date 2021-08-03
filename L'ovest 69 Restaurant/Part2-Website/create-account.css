@@ -1,0 +1,102 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Tan Eng Lip
+    Filename:       create-account.css
+
+*/
+body{
+    background-image: url("pics/create-account/create-account.jpg") ;
+    background-size: cover;
+}
+#content{
+    height: 800px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.title p {
+
+    text-align: center;
+    font-size:40px;
+    font-weight:bold;
+    font-family:initial ;
+    padding: 10% 20% 0% 20%;
+    color: black;
+}
+
+.main {
+
+    border: 2px solid #808080;
+    margin: 2% 30% 5% 30%;
+    padding: 2%;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.main p {
+    font-size: 15px;
+    display: block;
+    text-align: left;
+    margin: 0px;
+}
+
+input[type=text] ,input[type="email"],#input_gendertype,input[type=password]{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 5px 0px 5% 0px;
+    border: 2px solid #808080;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 2px 1px #404040;
+
+}
+
+input[type=text]:valid:focus,
+input[type=email]:valid:focus,
+input[type=password]:valid:focus{
+    background-image: url(pics/create-account/tick.png);
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input[type=text]:invalid:focus,
+input[type=email]:invalid:focus, 
+input[type=password]:invalid:focus{
+    background: url(pics/create-account/false.png) bottom right /contain no-repeat;
+}
+
+button[type=button] {
+    width: 100%;
+    margin: 20px 0px 0% 0px;
+    padding: 14px 20px;
+    background-color: #00b33c;
+    border:2px solid #808080;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 3px 3px lightgray;
+    transition: 0.2s;
+}
+
+button[type=button]:hover {
+    background-color: #00cc44;
+}
+
+/*smart phone and tablet size css*/
+@media only screen and (max-width:900px){
+#content{
+    height: 750px;
+}
+.title p{
+    padding-top: 20%;
+    padding-bottom: 1%;
+}
+.main{
+    padding:3%;
+    margin-left: 20%;
+    margin-right:20%;
+    margin-bottom:5%;
+}
+
+}

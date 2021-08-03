@@ -1,0 +1,180 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       membership-s1.css
+
+    Function:   Styles for the slide1 section in the membership.html page. 
+*/
+
+
+
+/*=================== Overall Page Styles ===================*/
+
+#slide1::before, #slide2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+/*==================== Slide 1 Overall Styles ====================*/
+
+#slide1::before {
+    background: url('pics/membership/membership-bg.jpeg') no-repeat fixed center/cover;
+    opacity: 0.5;
+}
+
+#slide1 {
+    height: 800px;
+    position: relative;
+}
+
+#s1-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 50%;
+    width: 800px;
+    z-index: 10;
+}
+
+#s1-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#s1-container > div {
+    border: 6px solid rgb(69, 69, 69);
+    z-index: 5;
+}
+
+
+
+/*=================== "JOIN OUR MEMBERSHIP !" Styles ===================*/
+
+#s1-container > div:first-of-type {
+    height: 70%;
+    background: white;
+    color: rgb(69, 69, 69);
+    font-size: 5.5rem;
+    text-align: center;
+    line-height: 6rem;
+    transition: 0.4s;
+}
+
+#s1-container > div:first-of-type:hover {
+    font-size: 6rem;
+    line-height: 6.5rem;
+    transition: 0.4s;
+}
+
+#s1-container > div:first-of-type.btnHovered {
+    height: 50%;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    transition: 0.4s;
+}
+
+
+
+/*=================== 'Login' & 'Create an account' button Styles ===================*/
+
+#s1-container > div:nth-of-type(2) {
+    margin-top: -6px;
+    height: 20%;
+    transition: 0.4s;
+    background: white;
+}
+
+#s1-container > div:nth-of-type(2).btnHovered {
+    height: 40%;
+    transition: 0.4s;
+}
+
+.s1-btns {
+    height: 100%;
+    width: 42.5%;
+    background: white;
+    cursor: pointer;
+    font-size: 2.25rem;
+    transition: 0.3s;
+    border: 0px outset rgb(69, 69, 69);
+    z-index: 2;
+    user-select: none;
+    text-align: center;
+}
+
+.s1-btns.btnHovered {
+    border: 12px outset rgb(230, 230, 230);
+    width: 57.5%;
+    transition: 0.3s;
+}
+
+#loginPgHref.btnHovered {
+    border-style: outset inset outset inset;
+    font-size: 3.6rem;
+}
+
+#registerPgHref.btnHovered {
+    border-style: outset;
+    font-size: 3.2rem;
+}
+
+#intervalOR {
+    height: 100%;
+    width: 15%;
+    transition: 0.3s;
+    z-index: 1;
+    background: rgb(69, 69, 69);
+    color: white;
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+#intervalOR.hideSelf {
+    width: 0%;
+    transition: 0.3s;
+}
+
+
+
+/*=================== 'Why Should I Join?' Styles ===================*/
+
+#s1-container > div:last-of-type {
+    margin-top: -6px;
+    height: 10%;
+    font-size: 1rem;
+    background: rgb(69, 69, 69);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#s1-container > div:last-of-type a {
+    color: white;
+}
+
+#s1-container > div:last-of-type a::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    background: rgb(69, 69, 69);
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+#s1-container > div:last-of-type a:hover::after {
+    bottom: -10px;
+    transition: 0.4s;
+}

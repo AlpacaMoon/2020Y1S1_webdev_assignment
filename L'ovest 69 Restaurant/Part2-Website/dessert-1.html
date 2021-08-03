@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Tan Eng Lip
+        Filename:       dessert.html
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Dessert</title>
+    <link rel="icon" type="Image/png" href="pics/main-logo.png"/>
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="dessert.css"/>
+
+    <!--Embedded Styles-->
+    <style>
+
+    </style>
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content -->
+    <div id="content">
+        <div id="content">
+            <div class="row">
+                <div class="col-1-3">
+                    <p>Lo'vest </p>
+                    <img src="pics/main-logo.png" alt="logo" />
+                    <p>Dessert</p>
+    
+                </div>
+                <div class="col-2-3">
+                    <div class="dessert1">
+                        <img src="pics/dessert/blueberryCheesecake.jpg" />
+                        <p> Blueberry Cheesecake — <span class="hidden">Compared to most cheesecake recipes, this version isn’t particularly high
+                            in fat, as</span> It uses cottage and curd cheeses instead of the traditional cream cheese, and is
+                            lightened by folding in whisked egg whites before baking. The delectable filling is set atop a
+                            crunchy digestive biscuit and oat base.
+                            <br /><br />
+                        <p class="price">Price: $15.90</p>
+                        <button
+                            onclick="addToCart('Blueberry cheesecake', 15.90, 1, 'pics/dessert/blueberryCheesecake.jpg', 'dessert.html', 'One of the best cheesecake in restaurant,not only creamy it also have crunchy base.' )">
+                            <span style="color: black;">Add to cart</span>
+                        </button>
+                        </p>
+                    </div>
+                    <br/>
+    
+                    <div class="dessert2">
+                        <img src="pics/dessert/macaron.jpg" />
+                        <p>Macaron — Perfectly crisp and thin crust on the outside,the cookie's texture beneath the crust is
+                            light, just a little chewy, and soft, but not so soft that it's mushy.The filling is creamy,
+                            smooth, firm <span class="hidden">(like ganache)</span>, light, and not sticky.It also provide lots of favour like
+                            blueberry, chocolate, strawberry etc.
+                            <br /><br />
+                        <p class="price">Price: $11.90</p>
+                        <button
+                            onclick="addToCart('Macaron', 11.90, 1, 'pics/dessert/macaron.jpg', 'dessert.html', 'Perfectly crisp and crumbly on the outside, smooth creamy filling on the inside.' )">
+                            <span style="color: black;">Add to cart</span>
+                        </button>
+                        </p>
+                    </div>
+                    <br/>
+    
+                    <div class="dessert3">
+                        <img src="pics/dessert/moltenChocoCake.jpg" />
+                        <p>Molten chocolate cakes — <span class="hidden">Also known as chocolate lava cakes.</span> The outer part of the cake was
+                            indeed crunchy. The inside of the cake was filled with a warm liquid chocolate. It was very rich
+                            and gooey. The lava oozed out of the cake just like you would expect from a molten choco cake at
+                            any other restaurant.
+                            <br /><br />
+                        <p class="price">Price: $19.90</p>
+                        <button
+                            onclick="addToCart('Molten Chocolate Cakes', 19.90, 1, 'pics/dessert/moltenChocoCake.jpg', 'dessert.html', ' The outer part of the cake was indeed crunchy. The inside of the cake was filled with a warm liquid chocolate. It was very rich and gooey. ' )">
+                            <span style="color: black;">Add to cart</span>
+                        </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

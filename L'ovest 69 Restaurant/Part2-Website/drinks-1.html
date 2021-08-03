@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wong Kar Yan
+        Filename:       drink-1.html
+
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Drink 1</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+
+    <!--Embedded Styles-->
+    <style>
+
+    </style>
+
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="styledrinks.css" />
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List--> <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content -->
+    <div id="content">
+        <!--header-->
+        <div class="header">
+                <h1>Drink</h1>
+        </div>
+        <div class="heading">
+            <p>L'ovest 69</p>
+        </div>
+        <!--body-->
+        <div class="row1">
+            
+            <!--column 1-->
+            <div class="col-1-1">
+
+                <!--links of the modules-->
+                <div>
+                    <ul class="modules">
+                       <li class="link"><a href="meat-1.html">Meat</a></li>
+                       <li class="link"><a href="vegetable-1.html">Vege</a></li>
+                       <li class="link"><a href="soup-1.html">Soup</a></li>
+                       <li class="link"><a href="dessert-1.html">Dessert</a></li>
+                    </ul>
+               </div><br />
+
+               <!--Next page button-->
+               <div class="next">
+                    <a href="drinks-2.html" >Next Page</a>
+                    <p class="remind">Click it and go to next page.</p>
+               </div>
+            </div>
+
+            <!--column 2-->
+            <div class="col-1-2">
+
+                <!--drink1-->
+                <div class="drink">
+                  <!--Image of drink-->  
+                  <img src="pics/drink/shirleytemple.jpg" alt="Shirley Temple" class="pics" />
+
+                  <!--Product name-->
+                  <div class="overlay">Shirley Temple<br />$10.00</div>
+                </div>  
+
+                <!--Product description-->
+                <div class="desc">
+                   <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;" class="heading">Shirley Temple</h1>
+                   <div class="message">&#8678 Best Seller!!</div>
+                   <p>Shirley Temple is a non-alcoholic mixed drink traditionally of ginger ale and grenadine with fresh lime juice that garnished with a maraschino cherry. 
+                      It is also the world’s first mocktail.
+                   </p>
+
+                   <!--Price-->
+                   <p style="font-weight: bold;">$10.00</p><br />
+
+                   <!--Add to cart button-->
+                   <button class="addtocart" onclick="addToCart('Shirley Temple', 10.00, 1, 'pics/drink/shirleytemple.jpg', 'drink.html', 'Shirley Temple is a non-alcoholic mixed drink traditionally of ginger ale and grenadine with fresh lime juice that garnished with a maraschino cherry. It is also the world’s first mocktail.')">
+                      Add to Cart
+                   </button> 
+                </div><br /><br />
+
+                <!--drink2-->
+                <div class="drink">
+                  <!--Image of drink--> 
+                  <img src="pics/drink/RoseSpritzer.jpg" alt="Rose Spritzer" class="pics" />
+
+                  <!--Product name-->
+                  <div class="overlay">Rose Spritzer<br />$7.00</div>
+                </div>
+
+                <!--Product description-->
+                <div class="desc">
+                    <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;">Rose Spritzer</h1>
+                    <p>Rose Spritzer is a bubbly drink with rose wine and soda water. So rose spritzer definitely is one of the summer’s best drinks.
+                    </p>
+
+                    <!--Price-->
+                    <p style="font-weight: bold;">$7.00</p><br />
+
+                    <!--Add to cart button-->
+                    <button class="addtocart" onclick="addToCart('Rose Spritzer', 7.00, 1, 'pics/drink/RoseSpritzer.jpg', 'drink.html', 'Rose Spritzer is a bubbly drink with rose wine and soda water. So rose spritzer definitely is one of the summer’s best drinks.')">
+                       Add to Cart
+                    </button> 
+                </div><br /><br /><br />
+
+                <!--drink3-->
+                <div class="drink">
+                  <!--Image of drink--> 
+                  <img src="pics/drink/MadrasCocktail.jpg" alt="Madras Cocktail" class="pics" />
+
+                  <!--Product name-->
+                  <div class="overlay">Madras Cocktail<br />$11.00</div>
+                </div>
+
+                <!--Product description-->
+                <div class="desc">
+                    <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;">Madras Cocktail</h1>
+                    <p>Madras Cocktail is a vibrant pink vodka drink that zingy and refreshing. This refreshing drink is made by vodka with mixed cranberry juice and orange juice.
+                    </p>
+
+                    <!--Price-->
+                    <p style="font-weight: bold;">$11.00</p><br />
+
+                    <!--Add to cart button-->
+                    <button class="addtocart" onclick="addToCart('Madras Cocktail', 11.00, 1, 'pics/drink/MadrasCocktail.jpg', 'drink.html', 'Madras Cocktail is a vibrant pink vodka drink that zingy and refreshing. This refreshing drink is made by vodka with mixed cranberry juice and orange juice.')">
+                       Add to Cart
+                    </button> 
+                </div><br /><br />  
+
+                <!--drink4-->
+                <div class="drink">
+                  <!--Image of drink-->   
+                  <img src="pics/drink/Strawberrysoda.png" alt="Strawberry Soda" class="pics" />
+
+                  <!--Product name-->
+                  <div class="overlay">Strawberry Soda<br />$8.00</div>
+                </div>
+
+                <!--Product description-->
+                <div class="desc">
+                    <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;">Strawberry Soda</h1>
+                    <p>Strawberry soda also is one of the drinks you must try out in our restaurant. This drink featured strawberries, gin, and soda water.
+                    </p>
+
+                    <!--Price-->
+                    <p style="font-weight: bold;">$8.00</p><br />
+
+                    <!--Add to cart button-->
+                    <button class="addtocart" onclick="addToCart('Strawberry Soda', 8.00, 1, 'pics/drink/Strawberrysoda.png', 'drink.html', 'Strawberry soda also is one of the drinks you must try out in our restaurant. This drink featured strawberries, gin, and soda water.')">
+                       Add to Cart
+                    </button> 
+                </div><br /><br />
+
+                <!--drink5-->
+                <div class="drink">
+
+                  <!--Image of drink-->  
+                  <img src="pics/drink/BloodOrangeMojito.png" alt="Blood Orange Mojito" class="pics" />
+
+                  <!--Product name-->
+                  <div class="overlay">Blood Orange Mojito<br />$11.00</div>
+                </div>
+
+                <!--Product description-->
+                <div class="desc">
+                    <h1 style="font-family: 'Segoe Script', sans-serif; font-size: 30px;">Blood Orange Mojito</h1>
+                    <p>Blood Orange Mojito is using beautiful seasonal blood orange and club soda. Blood orange are rich in vitamin C that helps treat or prevent scurvy disease. Not only that, blood orange also are rich in vitamin A helps maintain the health of the skin and some tissues in the body.
+                    </p>
+
+                    <!--Price-->
+                    <p style="font-weight: bold;">$11.00</p><br />
+
+                    <!--Add to cart button-->
+                    <button class="addtocart" onclick="addToCart('Blood Orange Mojito', 11.00, 1, 'pics/drink/BloodOrangeMojito.png', 'drink.html', 'Blood Orange Mojito is using beautiful seasonal blood orange and club soda. Blood orange are rich in vitamin C that helps treat or prevent scurvy disease. Not only that, blood orange also are rich in vitamin A helps maintain the health of the skin and some tissues in the body.')">
+                       Add to Cart
+                    </button> 
+                </div><br /><br />
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

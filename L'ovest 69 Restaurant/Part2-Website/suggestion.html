@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wong Kar Yan
+        Filename:       suggestion.html
+
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Suggestion</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+
+    <!--Embedded Styles-->
+    <style>
+
+    </style>
+
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="stylesugg.css" />
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--HIDE THIS IF CODE IS TOO LONG, you can hide using the small arrow on the left-->
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List--> <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content -->
+    <div id="content">
+
+        <!--header-->
+        <div class="header">
+            <h1>FEEDBACK / SUGGESTION</h1>
+        </div>
+    <div class="row1">
+
+        <!--row 1-1-->
+        <div class="top">
+            <form>
+                <input type="text" id="sugg" name="sugg" value="I hope L'OVEST 69 " class="type" /><br /><br />
+                <label for="name" style="font-size: 20px;">ID Name:</label>
+                <div class="form">
+                  <input type="text" id="name" name="id" required class="placeType" /><br /><br />
+                </div>
+                <label for="email" style="font-size: 20px;">Email :</label>
+                <div class="form">
+                  <input type="email" id="email" name="email" required class="placeType" /><br /><br />
+                </div>  
+                <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback or suggestion.')" class="button" />
+            </form>
+        </div>
+        <div class="question">
+
+            <!--service-->
+            <div class="service">
+                
+                <!--question-->
+                <p>Service?</p><br /><br />
+
+                <!--radio-->
+                <form> 
+
+                    <!--radio for awesome--> 
+                   <input type="radio" id="awesome" name="feedback" value="awesome" checked/>
+                   <label for="awesome">Awesome!</label>&nbsp&nbsp
+                   
+                   <!--radio for excellent-->
+                   <input type="radio" id="excellent" name="feedback" value="excellent" />
+                   <label for="excellent">Excellent</label>&nbsp&nbsp
+                   
+                   <!--radio for satisfactory-->
+                   <input type="radio" id="satisfactory" name="feedback" value="satisfactory" />
+                   <label for="satisfactory">Satisfactory</label>&nbsp&nbsp
+                  
+                   <!--radio for marginal-->
+                   <input type="radio" id="marginal" name="feedback" value="marginal" />
+                   <label for="marginal">Marginal</label>&nbsp&nbsp
+                   
+                   <!--radio for poor-->
+                   <input type="radio" id="poor" name="feedback" value="poor" />
+                   <label for="poor">Poor</label><br /><br />
+                   <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback.')" class="button" />
+                </form>
+            </div>
+
+            <!--meat-->
+            <div class="meat">
+
+                <!--question-->
+                <p>How about our meats?</p><br />
+
+                <!--radio-->
+                <form> 
+
+                    <!--radio for awesome--> 
+                   <input type="radio" id="awesome" name="feedback" value="awesome" checked/>
+                   <label for="awesome">Awesome!</label>&nbsp&nbsp
+                   
+                   <!--radio for excellent-->
+                   <input type="radio" id="excellent" name="feedback" value="excellent" />
+                   <label for="excellent">Excellent</label>&nbsp&nbsp
+                   
+                   <!--radio for satisfactory-->
+                   <input type="radio" id="satisfactory" name="feedback" value="satisfactory" />
+                   <label for="satisfactory">Satisfactory</label>&nbsp&nbsp
+                  
+                   <!--radio for marginal-->
+                   <input type="radio" id="marginal" name="feedback" value="marginal" />
+                   <label for="marginal">Marginal</label>&nbsp&nbsp
+                   
+                   <!--radio for poor-->
+                   <input type="radio" id="poor" name="feedback" value="poor" />
+                   <label for="poor">Poor</label><br /><br />
+                   <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback.')" class="button" />
+                </form>
+            </div>
+
+            <!--vegetable-->
+            <div class="vegetable">
+
+                <!--question-->
+                <p>How about our vegetables?</p><br />
+
+                <!--radio-->
+                <form> 
+
+                    <!--radio for awesome--> 
+                   <input type="radio" id="awesome" name="feedback" value="awesome" checked/>
+                   <label for="awesome">Awesome!</label>&nbsp&nbsp
+                   
+                   <!--radio for excellent-->
+                   <input type="radio" id="excellent" name="feedback" value="excellent" />
+                   <label for="excellent">Excellent</label>&nbsp&nbsp
+                   
+                   <!--radio for satisfactory-->
+                   <input type="radio" id="satisfactory" name="feedback" value="satisfactory" />
+                   <label for="satisfactory">Satisfactory</label>&nbsp&nbsp
+                  
+                   <!--radio for marginal-->
+                   <input type="radio" id="marginal" name="feedback" value="marginal" />
+                   <label for="marginal">Marginal</label>&nbsp&nbsp
+                   
+                   <!--radio for poor-->
+                   <input type="radio" id="poor" name="feedback" value="poor" />
+                   <label for="poor">Poor</label><br /><br />
+                   <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback.')" class="button" />
+                </form>
+            </div>
+
+            <!--soup-->
+            <div class="soup">
+
+                <!--question-->
+                <p>How about our soups?</p><br />
+
+                <!--radio-->
+                <form> 
+
+                   <!--radio for awesome--> 
+                   <input type="radio" id="awesome" name="feedback" value="awesome" checked/>
+                   <label for="awesome">Awesome!</label>&nbsp&nbsp
+                   
+                   <!--radio for excellent-->
+                   <input type="radio" id="excellent" name="feedback" value="excellent" />
+                   <label for="excellent">Excellent</label>&nbsp&nbsp
+                   
+                   <!--radio for satisfactory-->
+                   <input type="radio" id="satisfactory" name="feedback" value="satisfactory" />
+                   <label for="satisfactory">Satisfactory</label>&nbsp&nbsp
+                  
+                   <!--radio for marginal-->
+                   <input type="radio" id="marginal" name="feedback" value="marginal" />
+                   <label for="marginal">Marginal</label>&nbsp&nbsp
+                   
+                   <!--radio for poor-->
+                   <input type="radio" id="poor" name="feedback" value="poor" />
+                   <label for="poor">Poor</label><br /><br />
+                   <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback.')" class="button" />
+                </form>
+            </div>
+
+            <!--dessert-->
+            <div class="desert">
+
+                <!--question-->
+                <p>How about our desserts?</p><br />
+
+                <!--radio-->
+                <form> 
+
+                    <!--radio for awesome--> 
+                   <input type="radio" id="awesome" name="feedback" value="awesome" checked/>
+                   <label for="awesome">Awesome!</label>&nbsp&nbsp
+                   
+                   <!--radio for excellent-->
+                   <input type="radio" id="excellent" name="feedback" value="excellent" />
+                   <label for="excellent">Excellent</label>&nbsp&nbsp
+                   
+                   <!--radio for satisfactory-->
+                   <input type="radio" id="satisfactory" name="feedback" value="satisfactory" />
+                   <label for="satisfactory">Satisfactory</label>&nbsp&nbsp
+                  
+                   <!--radio for marginal-->
+                   <input type="radio" id="marginal" name="feedback" value="marginal" />
+                   <label for="marginal">Marginal</label>&nbsp&nbsp
+                   
+                   <!--radio for poor-->
+                   <input type="radio" id="poor" name="feedback" value="poor" />
+                   <label for="poor">Poor</label><br /><br />
+                   <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback.')" class="button" />
+                </form>
+            </div>
+
+            <!--drink-->
+            <div class="drink">
+
+                <!--question-->
+                <p>How about our drinks?</p><br />
+
+                <!--radio-->
+                <form> 
+
+                    <!--radio for awesome--> 
+                   <input type="radio" id="awesome" name="feedback" value="awesome" checked/>
+                   <label for="awesome">Awesome!</label>&nbsp&nbsp
+                   
+                   <!--radio for excellent-->
+                   <input type="radio" id="excellent" name="feedback" value="excellent" />
+                   <label for="excellent">Excellent</label>&nbsp&nbsp
+                   
+                   <!--radio for satisfactory-->
+                   <input type="radio" id="satisfactory" name="feedback" value="satisfactory" />
+                   <label for="satisfactory">Satisfactory</label>&nbsp&nbsp
+                  
+                   <!--radio for marginal-->
+                   <input type="radio" id="marginal" name="feedback" value="marginal" />
+                   <label for="marginal">Marginal</label>&nbsp&nbsp
+                   
+                   <!--radio for poor-->
+                   <input type="radio" id="poor" name="feedback" value="poor" />
+                   <label for="poor">Poor</label><br /><br />
+                   <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback.')" class="button" />
+                </form>
+            </div>
+
+
+            <!--event-->
+            <div class="event">
+
+                <!--question-->
+                <p>Events?</p><br />
+
+                <!--radio-->
+                <form> 
+
+                    <!--radio for awesome--> 
+                   <input type="radio" id="awesome" name="feedback" value="awesome" checked/>
+                   <label for="awesome">Awesome!</label>&nbsp&nbsp
+                   
+                   <!--radio for excellent-->
+                   <input type="radio" id="excellent" name="feedback" value="excellent" />
+                   <label for="excellent">Excellent</label>&nbsp&nbsp
+                   
+                   <!--radio for satisfactory-->
+                   <input type="radio" id="satisfactory" name="feedback" value="satisfactory" />
+                   <label for="satisfactory">Satisfactory</label>&nbsp&nbsp
+                   
+                   <!--radio for marginal-->
+                   <input type="radio" id="marginal" name="feedback" value="marginal" />
+                   <label for="marginal">Marginal</label>&nbsp&nbsp
+                   
+                   <!--radio for poor-->
+                   <input type="radio" id="poor" name="feedback" value="poor" />
+                   <label for="poor">Poor</label><br /><br />
+                   <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback.')" class="button" />
+                </form>
+            </div>
+
+
+            <!--membership-->
+            <div class="membership">
+
+                <!--question-->
+                <p>Did you satisfied our membership's offers?</p><br />
+
+                <!--radio-->
+                <form> 
+
+                    <!--radio for awesome--> 
+                   <input type="radio" id="awesome" name="feedback" value="awesome" checked/>
+                   <label for="awesome">Awesome!</label>&nbsp&nbsp
+                   
+                   <!--radio for excellent-->
+                   <input type="radio" id="excellent" name="feedback" value="excellent" />
+                   <label for="excellent">Excellent</label>&nbsp&nbsp
+                   
+                   <!--radio for satisfactory-->
+                   <input type="radio" id="satisfactory" name="feedback" value="satisfactory" />
+                   <label for="satisfactory">Satisfactory</label>&nbsp&nbsp
+                  
+                   <!--radio for marginal-->
+                   <input type="radio" id="marginal" name="feedback" value="marginal" />
+                   <label for="marginal">Marginal</label>&nbsp&nbsp
+                   
+                   <!--radio for poor-->
+                   <input type="radio" id="poor" name="feedback" value="poor" />
+                   <label for="poor">Poor</label><br /><br />
+                   <input type="submit" value="Submit" onclick="alert('Submitted. Thank you for your feedback.')" class="button" />
+                </form>
+            
+        </div>
+
+        <!--footer of the page-->
+        <div>
+            <p class="footer">THANK YOU.</p>
+
+            <!--pop up message-->
+            <p class="tq">We will try our best to improve LO'VEST 69. Thank you for your support and stay tune to our improvement.</p>
+        </div>
+    </div>
+        
+    </div>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>

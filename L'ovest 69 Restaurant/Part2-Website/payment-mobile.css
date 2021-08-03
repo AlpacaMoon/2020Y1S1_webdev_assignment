@@ -1,0 +1,295 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       payment-mobile.css
+
+    Function:   Styles for payment.html on smaller screens. 
+                Arrange the Cart Box and Form Box vertically on smaller screens.
+                Inputs are placed below their respective labels instead of beside them on smaller screens. 
+                Adjustments to fit the elements into smaller screens. 
+*/
+
+
+/* Arrange the Cart and Form Box vertically */
+@media screen and (max-width: 1320px) {
+
+    #slide2-sub2 {
+        flex-flow: column;
+    }
+
+    .slide2Box {
+        width: 95%;
+    }
+
+    #cartBox {
+        height: auto;
+    }
+
+    #dropdown-content {
+        height: 100%;
+    }
+
+    #dropdown-content #cart-item-list {
+        overflow-x: hidden;
+    }
+
+    #formBoxContent form {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cart-item-del {
+        width: 40px;
+    }
+    
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 900px) {
+
+    #s1-container {
+        width: 90%;
+    }
+
+    #s1-text-1 {
+        top: 0%;
+    }
+
+    #s1-text-1 span {
+        font-size: 1.5rem;
+    }
+
+    #s1-btns-1 {
+        top: 55%;
+        height: 100%;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    #s1-btns-1 > div {
+        width: 95%;
+        height: 47.5%;
+    }
+
+    #s1-btns-1>div:hover {
+        transform: scale(1.025);
+        font-size: 4.5rem;
+    }
+
+    #formBoxContent form, #formBoxContent fieldset {
+        min-width: 0px;
+    }
+
+    #formBoxContent label {
+        width: 25%;
+    }
+}
+
+/* Long input fields are now put below their respective labels instead of beside them */
+@media screen and (max-width: 720px) {
+    
+    #slide2-sub1 #currentMethod {
+        width: 100%;
+    }
+
+    #formBoxContent label.longInput {
+        margin: 0 0 5px 0;
+        font-size: 1.1em;
+        width: auto;
+    }
+
+    #formBoxContent label.longInput::after {
+        content: '';
+    }
+
+    #formBoxContent input.longInput, #formBoxContent textarea.longInput, #formBoxContent select.longInput {
+        margin: 0 0 15px 5px;
+        clear: left;
+        width: 80%;
+        min-width: 300px;
+    }
+}
+
+/* Short Inputs are now put below their respective labels instead of beside them */
+@media screen and (max-width: 600px) {
+
+    #cartBox, #formBox {
+        padding: 10px 4vw;
+    }
+
+    #dropdown-content {
+        padding: 5px 3vw;
+    }
+
+    #formBoxContent label.shortInput {
+        margin: 0 0 5px 0;
+        font-size: 1.1em;
+        width: auto;
+    }
+
+    #formBoxContent label.shortInput::after {
+        content: '';
+    }
+
+    #formBoxContent input.shortInput, #formBoxContent input.shorterInput, #formBoxContent select.shortInput {
+        margin: 0 0 15px 5px;
+        clear: left;
+    }
+
+    #formBoxContent input.shorterInput {
+        width: 80px;
+    }
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 480px) {
+    
+    #s1-text-1 {
+        top: 15%;
+    }
+
+    #s1-text-1 span {
+        font-size: 1.15rem;
+    }
+
+    #s1-btns-1 {
+        height: 70%;
+    }
+
+    #s1-btns-1 > div {
+        font-size: 2.75rem;
+    }
+
+    #s1-btns-1>div:hover {
+        transform: scale(1.025);
+        font-size: 3.15rem;
+        border: 4px solid rgb(130, 127, 77);
+    }
+
+    #cartBox, #formBox {
+        padding: 10px 3vw;
+    }
+
+    #cartBoxTitle, #formBoxTitle {
+        font-size: 10vw;
+    }
+
+    #dropdown-content {
+        padding: 5px 1vw;
+    }
+
+    #cartBox-totals-section #col-1 *, #cartBox-totals-section #col-2 * {
+        font-size: 4vw;
+    }
+
+    #cartBox-totals-section #col-1 {
+        width: 21vw;
+    } 
+
+    #cartBox-totals-section #col-2 {
+        width: 15vw;
+    } 
+
+    #cartBox-totals-section #col-3 * {
+        font-size: 7vw;
+    }
+
+    #formBoxContent form {
+        padding: 0;
+    }
+
+    #formBoxContent legend {
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    #formBoxContent label.longInput, #formBoxContent label.shortInput {
+        font-size: 4vw;
+    }
+
+    #formBoxContent input#otherSubField {
+        margin-top: 2vw;
+        width: 3vw;
+    }
+
+    #formBoxContent label[for="otherSubField"] {
+        margin-top: 2vw;
+        font-size: 3vw;
+    }
+
+    #formBoxContent input.longInput, #formBoxContent textarea.longInput, #formBoxContent select.longInput {
+        width: 100%;
+        min-width: 0px;
+    }
+
+    #formBoxContent input.shortInput, #formBoxContent input.shorterInput, #formBoxContent select.shortInput {
+        width: 70%;
+        min-width: 100px;
+    }
+
+    #slide2-sub3 {
+        height: 45vw;
+    }
+
+    #slide2-sub3 > div {
+        width: 90%;
+        height: 35vw;
+    }
+
+    #slide2-sub3 #submit-confirm {
+        font-size: 10vw;
+    }
+
+    #slide2-sub3 #submit-total span {
+        font-size: 6vw;
+    }
+
+    #slide2-sub3 #submit-btn-grp:hover {
+        transform: scale(1.05);
+    }
+
+    #slide2-sub3 #submit-confirm.totalHovered {
+        font-size: 6vw;
+    }
+    
+    #slide2-sub3 #submit-total.totalHovered span {
+        font-size: 14vw;
+    }
+}
+
+/* Adjustments to fit elements into the screen */
+@media screen and (max-width: 360px) {
+
+    #slide2-sub1 #currentMethod {
+        font-size: 13vw;
+    }
+
+    #dropdown-content #cart-item-list {
+        max-height: 150vw;
+    }
+
+    #dropdown-content .cart-item-count button {
+        display: none;
+    }
+
+    #dropdown-content .cart-item-count input {
+        width: 100%;
+        border-radius: 2vw;
+    }
+    
+    #formBoxContent legend {
+        font-size: 4vw;
+    }
+
+    #formBoxContent input#otherSubField {
+        margin-top: 1vw;
+        margin-right: 5px;
+    }
+
+    #formBoxContent input.shortInput, #formBoxContent input.shorterInput, #formBoxContent select.shortInput {
+        width: 70%;
+        min-width: 20px;
+    }
+}

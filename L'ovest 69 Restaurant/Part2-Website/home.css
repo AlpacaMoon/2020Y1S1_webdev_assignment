@@ -1,0 +1,75 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Lee Seng Wai
+    Filename:       home.css
+
+    Function:   Style for home page.
+*/
+
+/* [ Default Background ] */
+body {
+    background-image: url("pics/background1.jpg");
+}
+
+/* [ Default white semi-transparent bg ] */
+#content {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 8%;
+    height: 1000px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.homeTitle {
+    text-align: center;
+    font-size: 70px;
+    color: rgb(69, 69, 69);
+}
+
+.homeTitle h1 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+}
+
+.homeTitle p {
+    font-size: 30px;
+}
+
+.homepage {
+    opacity: initial;
+}
+
+.picture {
+    float : left;
+    position : relative;
+    top : -2530;
+    width : 100%;
+    height : 19.8%;
+}
+
+.picture1, .picture2, .picture3, .picture4, .picture5 {
+    text-align: center;
+    right: 900;
+    float: left;
+    width : 20%;
+    height : 100%;
+    opacity : 1;
+    transition : 0.5s;
+}
+
+.picture1:hover, .picture2:hover, .picture3:hover, .picture4:hover, .picture5:hover{
+    opacity : 0.8;
+}
+
+.homepage {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    padding: 10%;
+    font-size: 70px;
+    color: rgb(69, 69, 69);
+}
+

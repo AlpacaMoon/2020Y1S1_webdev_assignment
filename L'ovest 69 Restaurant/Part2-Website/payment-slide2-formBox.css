@@ -1,0 +1,150 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       payment-slide2-formBox.css
+
+    Function:   Styles for the Form Box in the slide2 section of the payment.html page. 
+*/
+
+
+
+/*==================== Form Box Title Styles ====================*/
+
+#formBoxTitle {
+    width: 100%;
+    background: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+
+
+/*==================== Form Box Overall Content Styles ====================*/
+
+#formBoxContent {
+    width: 100%;
+    height: 440px;
+    border-radius: 0 0 10px 10px;
+    padding: 0px 10px 10px 20px;
+    margin: 0;
+    background: white;
+    z-index: 0;
+    overflow: scroll;
+}
+
+#submit-form-btn {
+    display: none;
+}
+
+#formBoxContent form {
+    padding: 10px;
+    width: 100%;
+    min-width: 520px;
+}
+
+#formBoxContent fieldset {
+    border: 1px solid gray;
+    padding: 15px;
+    position: relative;
+}
+
+#formBoxContent legend {
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+
+
+/*==================== Label Styles ====================*/
+
+#formBoxContent label {
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    width: 20%;
+    position: relative;
+    float: left;
+    clear: left;
+}
+
+#formBoxContent label::after {
+    content: ': ';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#otherDetails label[for=otherSubField] {
+    font-family: Arial, Helvetica, sans-serif;
+    clear: none;
+    width: auto;
+    margin-top: 9px;
+}
+
+#otherDetails label[for=otherSubField]::after {
+    content: '';
+}
+
+#formBoxContent label:not([for=otherSubField]) {
+    font-weight: bold;
+}
+
+
+
+/*==================== Input Styles ====================*/
+
+#formBoxContent input, #formBoxContent textarea, #formBoxContent select {
+    margin: 0px 10px 10px 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid gray;
+    transition: 0.3s;
+    padding: 0px 2px;
+    float: left;
+}
+
+#formBoxContent input:focus, #formBoxContent textarea:focus, #formBoxContent select:focus {
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px -12px 8px -10px rgba(90, 68, 68, 0.2) inset, 0px -12px 20px -10px rgba(192, 192, 192, 0.3) inset;
+    transition: 0.3s;
+}
+
+#formBoxContent ::placeholder {
+    opacity: 0.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#formBoxContent #payCardNumField::placeholder {
+    font-size: 0.78rem;
+}
+
+input.longInput, textarea.longInput, select.longInput {
+    width: 60%;
+    max-width: 500px;
+}
+
+input.shortInput, select.shortInput {
+    width: 150px;
+}
+
+input.shorterInput {
+    width: 40px;
+}
+
+#formBoxContent input:invalid.blurred, #formBoxContent textarea:invalid.blurred, #formBoxContent select:invalid.blurred {
+    box-shadow: 0px -12px 10px -10px rgba(255, 0, 0, 0.2) inset, 0px -12px 15px -10px rgba(255, 96, 96, 0.3) inset;
+    transition: 0.3s;
+}
+
+#otherDetails input#otherSubField {
+    float: left;
+    clear: left;
+    margin: 10px 10px 10px 5px;
+}

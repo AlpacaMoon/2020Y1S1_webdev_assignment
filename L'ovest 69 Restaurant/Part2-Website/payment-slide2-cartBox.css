@@ -1,0 +1,128 @@
+/*
+    Assignment 2020/2021
+    Course:         AACS1483 - Web Design and Development
+    Website Name:   Lo'vest 69 Restaurant
+    Author:         Thong So Xue
+    Filename:       payment-slide2-cartBox.css
+
+    Function:   Styles for the Cart Box in the slide2 Section of the payment.html page. 
+*/
+
+
+
+/*==================== Cart Box Title Styles ====================*/
+
+#cartBoxTitle {
+    width: 100%;
+    background: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+
+/*==================== Overall Cart List Styles ====================*/
+
+#dropdown-content {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    border-radius: 0 0 10px 10px;
+    padding: 0px 10px 10px 20px;
+    margin: 0;
+    background: white;
+    z-index: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#dropdown-content.cartDropUp, #dropdown-content.cartDropDown {
+    top: 0px;
+}
+
+#cart-item-list {
+    overflow: scroll;
+    padding: 5px 0;
+    height: 100%;
+    margin: 0;
+}
+
+#cart-checkout, .cart-title {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+
+
+/*==================== Individual Cart Items Styles ====================*/
+
+.cart-item {
+    position: relative;
+    border: 3px solid rgb(69, 69, 69);
+    border-radius: 0px;
+    margin: 0 5px -3px 5px;
+    transition: 0.3s;
+}
+
+.cart-item:first-of-type {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.cart-item:hover, #cartBox-totals-section:hover {
+    border: 5px solid rgb(130, 127, 77);
+    border-radius: 5px;
+    transform: scale(1.01);
+    transition: 0.3s;
+    z-index: 1;
+}
+
+
+
+/*==================== Totals Section Styles ====================*/
+
+#cartBox-totals-section:hover #col-3 span {
+    color: rgb(130, 127, 77);
+    transition: 0.3s;
+}
+
+#cartBox-totals-section {
+    margin: 0px 5px 10px 5px;
+    border: 3px solid rgb(69, 69, 69);
+    border-radius: 0px 0px 5px 5px;
+    transition: 0.3s;
+    position: relative;
+    padding: 5px;
+}
+
+#cartBox-totals-section::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+#cartBox-totals-section [id*=col] {
+    float: left;
+}
+
+#cartBox-totals-section #col-1 {
+    width: 100px;
+}
+
+#cartBox-totals-section #col-2 {
+    width: 85px;
+}
+
+#cartBox-totals-section #col-3 {
+    text-align: right;
+    font-size: 2rem;
+    float: right;
+}
+
+#cartBox-totals-section #col-3 span {
+    transition: 0.3s;
+}

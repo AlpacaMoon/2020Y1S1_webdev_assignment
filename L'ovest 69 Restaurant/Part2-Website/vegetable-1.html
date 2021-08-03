@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Assignment 2020/2021
+        Course:         AACS1483 - Web Design and Development
+        Website Name:   Lo'vest 69 Restaurant
+        Author:         Wang Shu Wei
+        Filename:       vegetable-1.html
+
+        Function:   This is the default layout for all html files of this website. 
+                    In this way, the whole website is able to maintain consistency of the overall design.
+                    By using the same base layout for all html, work time is also efficiently reduced.  
+    -->
+
+    <!--Basics-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'ovest 69 - Vegetables</title>
+    <link rel="icon" type="image/png" href="pics/main-logo.png" />
+
+    <!--Self-written Javascript-->
+    <script src="js/default-javascipt.js" type="text/javascript" defer></script>
+    <script src="js/cart-js.js" type="text/javascript" defer></script>
+
+    <!--Embedded Styles-->
+    <style>
+
+    </style>
+
+
+    <!--Import Stylesheets-->
+    <!--[ Link your own stylesheet below the "default-layout.css" ]-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="default-layout.css" />
+    <link rel="stylesheet" href="default-layout-mobile.css" />
+    <link rel="stylesheet" href="vegetable.css" />
+
+</head>
+
+
+
+<!--Main Body-->
+
+<body>
+    <!--White BG on transition, Logo, Nav bar & Cart-->
+    <div>
+        <!--White Cover Used in page Transitions-->
+        <div id="page-transition"></div>
+
+
+        <!--69 LOGO-->
+        <div id="navLogoDiamond"></div>
+        <div id="navLogo" class="pageCenterIn">
+            <a href="home.html"><img src="pics/main-logo.png" alt="logo" weight="70" height="70" /> </a>
+        </div>
+
+
+        <!--Header / Navigation Bar-->
+        <div id="navBar">
+            <img src="pics/hamburger-icon.png" id="hamburger-icon" />
+            <div id="navList">
+                <ul>
+                    <!--Float to Left-->
+                    <li class="navItem"><a href="menu.html">MENU</a></li>
+                    <li class="navItem"><a href="events.html">EVENTS</a></li>
+
+                    <!--Float to Right-->
+                    <li id="cart-icon-space"></li>
+                    <li class="navItem"><a href="about-us.html">ABOUT US</a></li>
+                    <li class="navItem"><a href="membership.html">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+            <!--Cart Icon-->
+            <img id="cart-icon" src="pics/cart-icon.png" />
+        </div>
+
+
+        <!--Cart detection Hitboxes-->
+        <div class="dropdown-hitbox" id="dropdown-hitbox-1"></div>
+
+        <!--Cart Dropdown at Top-right-->
+        <div id="dropdown-content">
+            <!--"Cart" title text-->
+            <p class="cart-title">Cart</p>
+            <!--Cart Items List-->
+            <!--Default to Empty-->
+            <div id="cart-item-list">
+                <ul></ul>
+                <!--Checkout Button-->
+                <a class="notJumping">
+                    <div id="cart-checkout">
+                        <span id="total">TOTAL: $<span>0.00</span></span>
+                        <span id="checkoutValid">CHECKOUT</span>
+                        <span id="checkoutInvalid">It's Empty Here :(</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Content-->
+    <div id="body">
+
+        <!--Heading-->
+        <div id="heading">
+            <h2>&#9476; MENU &#9476;</h3>
+            <h1>Vegetables</h1>
+
+            <!--Other Menu Link-->
+            <div class="menu-link">
+                <h4>Other Menu</h4>
+                <ul>
+                    <li><a href="meat-1.html">Meat</a></li>
+                    <li><a href="soup-1.html">Soup</a></li>
+                    <li><a href="dessert-1.html">Dessert</a></li>
+                    <li><a href="drinks-1.html">Drinks</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!--Vegetable dishes menu-->
+        <div id="content">
+
+            <!--Dish 1-->
+            <div class="dish" id="caesarSalad" data-text="&#9733; &#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/caesarSalad.jpg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Caesar Salad</h3>
+                    <!--View discription button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">A green salad of romaine lettuce and croutons 
+                        dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, 
+                        garlic, Dijon mustard, Parmesan cheese, and black pepper.</p>
+                    <!--Food price-->
+                    <p class="price">$12.30</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Caesar Salad', 12.30, 1, 'pics/vegetable/caesarSalad.jpg', 'vegetable-1.html#caesarSalad', 
+                    'It is a great salad to perk up any spring or summer meal.')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 2-->
+            <div class="dish" id="capreseSalad" data-text="&#9733; &#9733; &#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/capreseSalad.jpg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Caprese Salad</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">A simple Italian salad, made of sliced fresh 
+                        mozzarella, tomatoes, and sweet basil, seasoned with salt and 
+                        olive oil, occasionally paired with arugula.</p>
+                    <!--Food price-->
+                    <p class="price">$13.40</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Caprese Salad', 13.40, 1, 'pics/vegetable/capreseSalad.jpg', 'vegetable-1.html#capreseSalad', 
+                    'Trade in the usual veggie party platter for these lively kabobs.')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 3-->
+            <div class="dish" id="cruditePlatter" data-text="&#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/cruditePlatter.jpg" />
+                </div>
+                <!--Foood detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Crudite Platter</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">Traditional French appetizers consisting of 
+                        sliced or whole raw vegetables which are typically dipped in a 
+                        vinaigrette or other dipping sauce.</p>
+                    <!--Food price-->
+                    <p class="price">$21.90</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Crudite Platter', 21.90, 1, 'pics/vegetable/cruditePlatter.jpg', 'vegetable-1.html#cruditePlatter', 
+                    'It is such a popular appetizer at any gathering, dinner party, or grilling event. ')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 4-->
+            <div class="dish" id="greenBeanCasserole" data-text="&#9733; &#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/greenBeanCasserole.jpg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Green Bean Casserole</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">It is consisting mostly of green beans, cream of mushroom soup, 
+                        and french fried onions.</p>
+                    <!--Food price-->
+                    <p class="price">$17.65</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Green Bean Casserole', 17.65, 1, 'pics/vegetable/greenBeanCasserole.jpg', 'vegetable-1.html#greenBeanCasserole', 
+                    'It is the one of the favorite, crispy elements of the dish with its sprinkling the onion rings on top.')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 5-->
+            <div class="dish" id="lesco" data-text="&#9733; &#9733; &#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/lecso.jpg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Lesco</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">It is a Hungarian thick vegetable ragout or stew which 
+                        features explicitly yellow pointed peppers, tomato, onion, salt, and ground 
+                        sweet and hot paprika as a base recipe.</p>
+                    <!--Food price-->
+                    <p class="price">$11.30</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Lesco', 11.30, 1, 'pics/vegetable/lecso.jpg', 'vegetable-1.html#lesco', 
+                    'Leczo should be served hot and spicy. It probably came to Poland from Hungary.')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 6-->
+            <div class="dish" id="michiganSalad" data-text="&#9733; &#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/michiganSalad.jpg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Michigan Salad</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">A green salad which topped with dried cherries, blue cheese, and 
+                        used dried cranberries instead of cherries and other kind of fruits, omit or substitute 
+                        the blue cheese, and add walnuts or pecans.</p>
+                    <!--Food price-->
+                    <p class="price">$12.70</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Michigan Salad', 12.70, 1, 'pics/vegetable/michiganSalad.jpg', 'vegetable-1.html#michiganSalad', 
+                    'It is a slightly sweet, creamy style vinaigrette and paris amazing well with this salad.')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 7-->
+            <div class="dish" id="pastaPrimavera" data-text="&#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/pastaPrimavera.jpg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Pasta Primavera</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">An American dish that consists of pasta and fresh vegetables 
+                        chopped a mix of onion, celery and carrot, cooked in olive oil and flavoured 
+                        with garlic. </p>
+                    <!--Food price-->
+                    <p class="price">$18.60</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Pasta Primavera', 18.60, 1, 'pics/vegetable/pastaPrimavera.jpg', 'vegetable-1.html#pastaPrimavera', 
+                    'It has a light and fresh sauce and is the perfect break from heavier winter foods!')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 8-->
+            <div class="dish" id="picoDeGallo" data-text="&#9733; &#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/picoDeGallo.jpeg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Pico de Gallo</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">A type of salsa commonly used in Mexican cuisine. It is made 
+                        from chopped tomato, onion, Serrano peppers, with salt, cumin, lime juice, and cilantro.</p>
+                    <!--Food price-->
+                    <p class="price">$11.40</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Pico de Gallo', 11.40, 1, 'pics/vegetable/picoDeGallo.jpeg', 'vegetable-1.html#picoDeGallo', 
+                    'It is a classic Mexican tomato dipthat adds a fresh, healthy, low-calorie boost of flavor to just about any Mexican meal.')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 9-->
+            <div class="dish" id="ratatouille" data-text="&#9733; &#9733; &#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/ratatouille.jpg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3>Ratatouille</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">It include tomato, garlic, onion, courgette (zucchini), aubergine (eggplant), 
+                        bell pepper, and some combination of leafy green herbs common to the region.</p>
+                    <!--Food price-->
+                    <p class="price">$21.20</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Ratatouille', 21.20, 1, 'pics/vegetable/ratatouille.jpg', 'vegetable-1.html#ratatouille', 
+                    'Ratatouille is a bright and chunky summer vegetable stew, rich with olive oil and fragrant with garlic and herbs.')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Dish 10-->
+            <div class="dish" id="shepherdSalad" data-text="&#9733; &#9733; &#9733; &#9733;">
+                <!--Picture-->
+                <div class="img">
+                    <img src="pics/vegetable/shepherdSalad.jpg" />
+                </div>
+                <!--Food detail-->
+                <div class="detail">
+                    <!--Food name-->
+                    <h3 class>Shepherd Salad</h3>
+                    <!--View description button-->
+                    <div class="view">+ view description</div>
+                    <!--Food description-->
+                    <p class="descript">A salad originated from Turkish cuisine and Azerbaijani cuisine consisting of 
+                        finely chopped tomatoes, cucumbers, long green peppers, onion, and flat-leaf parsley.</p>
+                    <!--Food price-->
+                    <p class="price">$16.66</p>
+                    <!--Add to cart button-->
+                    <button class="addToCart" onclick="addToCart('Shepherd Salad', 16.66, 1, 'pics/vegetable/shepherdSalad.jpg', 'vegetable-1.html#lesco', 
+                    'This summer salad is distinctive because of all the fresh herbs and the sumac and red pepper used to season it.')">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Javascript to show descrption after click the view description buttom -->
+    <script>
+        var coll = document.getElementsByClassName("view");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+
+    <!--Footer, Back to Top Button & bottom JS-->
+    <div>
+        <!--Back to Top Button-->
+        <a href="#" id="back-to-top" class="notJumping">
+            <img src="pics/back-to-top.png" />
+        </a>
+
+
+        <!--Footer-->
+        <footer id="footer">
+            <div>
+                <ul>
+                    <!--Float Left-->
+                    <li class="footerItem"><a href="contact.html">CONTACT US</a></li>
+                    <li class="footerItem"><a href="support.html">SUPPORT</a></li>
+                    <div class="footerIcons">
+                        <!--Float Right-->
+                        <li onmouseenter="tooltipHover('Instagram');"><a href="https://instagram.com"><img
+                                    src="pics/instagram.png" alt="Instagram" /></a>
+                        <li onmouseenter="tooltipHover('Google+');"><a href="https://google.com"><img
+                                    src="pics/google+.png" alt="Google+" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Twitter');"><a href="https://twitter.com"><img
+                                    src="pics/twitter.png" alt="Twitter" /></a>
+                        </li>
+                        <li onmouseenter="tooltipHover('Facebook');"><a href="https://facebook.com"><img
+                                    src="pics/facebook.png" alt="Facebook" /></a></li>
+                        <li id="mediaTooltipLi">
+                            <div id="mediaTooltip"></div>
+                            <div id="mediaTooltipCover"></div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!--Bottom JS-->
+        <script src="js/default-javascipt-after.js"></script>
+    </div>
+
+</body>
+
+</html>
