@@ -17,6 +17,8 @@ Part B: Implementing the Web site which includes the construction of a graphical
 This assignment should be submitted before week 13 of the semester. Late submission will be penalized based on the Late Submission Policy by TAR UC. 
 
 
+
+
 ### Contributers and contributions
 1. Thong So Xue - Menu, Payment, Membership, Soups
 2. Tan Eng Lip - Login, Create Account, Membership, Exclusive Page, Desserts
