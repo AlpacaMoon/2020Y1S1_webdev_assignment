@@ -31,4 +31,5 @@ This assignment should be submitted before week 13 of the semester. Late submiss
 1. HTML
 2. CSS
 3. JavaScript
+
 This assignment is restricted to only these languages and the use of external libraries such as BootStrap or jQuery is prohibited by the course leader. 
